@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/caipengli/AndroidStudioProjects/PinyinIME/app/libs"><file name="armeabi/libjni_pinyinime.so" path="/home/caipengli/AndroidStudioProjects/PinyinIME/app/libs/armeabi/libjni_pinyinime.so"/><file name="armeabi-v7a/libjni_pinyinime.so" path="/home/caipengli/AndroidStudioProjects/PinyinIME/app/libs/armeabi-v7a/libjni_pinyinime.so"/></source></dataSet><dataSet config="debug"><source path="/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/debug/jniLibs"/></dataSet></merger>
