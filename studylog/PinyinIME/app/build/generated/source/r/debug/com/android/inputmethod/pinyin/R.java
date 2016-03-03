@@ -16,14 +16,18 @@ public final class R {
     public static final class color {
         public static final int active_candidate_color=0x7f080000;
         public static final int balloon_color=0x7f080001;
-        public static final int candidate_color=0x7f080002;
-        public static final int composing_color=0x7f080003;
-        public static final int composing_color_hl=0x7f080004;
-        public static final int composing_color_idle=0x7f080005;
-        public static final int footnote_color=0x7f080006;
-        public static final int label_color=0x7f080007;
-        public static final int label_color_hl0=0x7f080008;
-        public static final int recommended_candidate_color=0x7f080009;
+        public static final int black=0x7f080002;
+        public static final int blue=0x7f080003;
+        public static final int candidate_color=0x7f080004;
+        public static final int composing_color=0x7f080005;
+        public static final int composing_color_hl=0x7f080006;
+        public static final int composing_color_idle=0x7f080007;
+        public static final int footnote_color=0x7f080008;
+        public static final int half_transparent=0x7f080009;
+        public static final int label_color=0x7f08000a;
+        public static final int label_color_hl0=0x7f08000b;
+        public static final int recommended_candidate_color=0x7f08000c;
+        public static final int trans_purple=0x7f08000d;
     }
     public static final class dimen {
         public static final int candidate_margin_left_right=0x7f060000;

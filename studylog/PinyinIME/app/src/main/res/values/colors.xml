@@ -23,5 +23,10 @@
     <color name="footnote_color">#ff343233</color>
     <color name="composing_color">#ff000000</color>
     <color name="composing_color_hl">#ffffffff</color>
-    <color name="composing_color_idle">#ff777777</color>
+    <color name="composing_color_idle">#ffdddddd</color>
+    <color name="trans_purple">#7fff69b4</color>
+    <color name="half_transparent">#30000000</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff00ddff</color>
+
 </resources>

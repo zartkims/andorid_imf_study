@@ -23,6 +23,7 @@ import android.os.Handler;
 import android.os.SystemClock;
 //import android.os.SystemProperties;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -308,7 +309,7 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
         mMajorView.invalidate();
     }
 
-    private void    responseKeyEvent(SoftKey sKey) {
+    private void responseKeyEvent(SoftKey sKey) {
         if (null == sKey) return;
         ((PinyinIME) mService).responseSoftKeyEvent(sKey);
         return;
@@ -319,6 +320,7 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
         if (mPopupSkbShow) {
             if (mPopupX <= x && mPopupX + mPopupSkb.getWidth() > x
                     && mPopupY <= y && mPopupY + mPopupSkb.getHeight() > y) {
+                Log.i("cpl","int the fujianpan");
                 positionInParent[0] = mPopupX;
                 positionInParent[1] = mPopupY;
                 mPopupSkbView.setOffsetToSkbContainer(positionInParent);
@@ -388,7 +390,6 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
 
     private void resetKeyPress(long delay) {
         mLongPressTimer.removeTimer();
-
         if (null != mSkv) {
             mSkv.resetKeyPress(delay);
         }
@@ -435,8 +436,9 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
         int x = (int) event.getX();
         int y = (int) event.getY();
         // Bias correction
-        y = y + mYBiasCorrection;
-
+//        y = y + mYBiasCorrection;
+//        x = x + mYBiasCorrection;
+//        Log.i("cpl" ,"mYBiasCorrection : " + mYBiasCorrection);
         // Ignore short-distance movement event to get better performance.
         if (event.getAction() == MotionEvent.ACTION_MOVE) {
             if (Math.abs(x - mXLast) <= MOVE_TOLERANCE
@@ -496,6 +498,8 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
                         mSoftKeyDown = mSkv.onKeyMove(
                                 x - mSkvPosInContainer[0], y
                                         - mSkvPosInContainer[1]);
+//                        Log.i("cpl","move key down : " + mSoftKeyDown.getKeyLabel()
+//                                + "_" + mSoftKeyDown.getKeyCode() + "  discard : " + mDiscardEvent);
                         if (null == mSoftKeyDown) {
                             mDiscardEvent = true;
                         }
@@ -530,6 +534,7 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
             break;
 
         case MotionEvent.ACTION_CANCEL:
+            resetKeyPress(0);
             break;
         }
 
@@ -589,12 +594,12 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
          */
         public static final int LONG_PRESS_KEYNUM2 = 3;
 
-        SkbContainer mSkbContainer;
+//        SkbContainer mSkbContainer;
 
         private int mResponseTimes = 0;
 
         public LongPressTimer(SkbContainer skbContainer) {
-            mSkbContainer = skbContainer;
+//            mSkbContainer = skbContainer;
         }
 
         public void startTimer() {

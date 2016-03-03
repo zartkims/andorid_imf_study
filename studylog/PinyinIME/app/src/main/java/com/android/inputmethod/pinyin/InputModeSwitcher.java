@@ -391,8 +391,7 @@ public class InputModeSwitcher {
         mToggleStatePhoneSym = Integer.parseInt(r
                 .getString(R.string.toggle_phone_sym));
 
-        mToggleStateGo = Integer
-                .parseInt(r.getString(R.string.toggle_enter_go));
+        mToggleStateGo = Integer.parseInt(r.getString(R.string.toggle_enter_go));
         mToggleStateSearch = Integer.parseInt(r
                 .getString(R.string.toggle_enter_search));
         mToggleStateSend = Integer.parseInt(r
@@ -564,6 +563,7 @@ public class InputModeSwitcher {
             }
         }
         mEditorInfo = editorInfo;
+        mEditorInfo.imeOptions |= EditorInfo.IME_FLAG_NO_FULLSCREEN;//显式设置 横屏的时候不全屏 cpl
         saveInputMode(newInputMode);
         prepareToggleStates(false);
         return mInputIcon;
@@ -623,6 +623,7 @@ public class InputModeSwitcher {
         }
 
         mEditorInfo = editorInfo;
+        mEditorInfo.imeOptions |= EditorInfo.IME_FLAG_NO_FULLSCREEN;//显式设置 横屏的时候不全屏 cpl 仅仅在这里设置不在hkbrquest中设置的话会有bug
         saveInputMode(newInputMode);
         prepareToggleStates(true);
         return mInputIcon;
@@ -667,18 +668,18 @@ public class InputModeSwitcher {
         return false;
     }
 
-    public boolean isChineseTextWithHkb() {
+    public boolean isChineseTextWithSkb() {
         int skbLayout = (mInputMode & MASK_SKB_LAYOUT);
-        if (0 == skbLayout) {
+        if (MASK_SKB_LAYOUT_QWERTY == skbLayout) {
             int language = (mInputMode & MASK_LANGUAGE);
             if (MASK_LANGUAGE_CN == language) return true;
         }
         return false;
     }
 
-    public boolean isChineseTextWithSkb() {
+    public boolean isChineseTextWithHkb() {
         int skbLayout = (mInputMode & MASK_SKB_LAYOUT);
-        if (MASK_SKB_LAYOUT_QWERTY == skbLayout) {
+        if (0 == skbLayout) {
             int language = (mInputMode & MASK_LANGUAGE);
             if (MASK_LANGUAGE_CN == language) return true;
         }

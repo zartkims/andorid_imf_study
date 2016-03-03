@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.graphics.drawable.Drawable;
+import android.util.Log;
 
 import java.io.IOException;
 import java.util.regex.Pattern;
@@ -56,51 +57,51 @@ public class XmlKeyboardLoader {
      * should be larger than double of this value. Defined inside
      * {@link #XMLTAG_SKB_TEMPLATE} and {@link #XMLTAG_KEYBOARD}.
      */
-    private static final String XMLATTR_KEY_XMARGIN = "key_xmargin";
+    private static final String XML_ATTR_KEY_XMARGIN = "key_xmargin";
 
     /**
      * Attribute tag of the top and bottom margin for a key. A key's height
      * should be larger than double of this value. Defined inside
      * {@link #XMLTAG_SKB_TEMPLATE} and {@link #XMLTAG_KEYBOARD}.
      */
-    private static final String XMLATTR_KEY_YMARGIN = "key_ymargin";
+    private static final String XML_ATTR_KEY_YMARGIN = "key_ymargin";
 
     /**
      * Attribute tag of the keyboard background image. Defined inside
      * {@link #XMLTAG_SKB_TEMPLATE} and {@link #XMLTAG_KEYBOARD}.
      */
-    private static final String XMLATTR_SKB_BG = "skb_bg";
+    private static final String XML_ATTR_SKB_BG = "skb_bg";
 
     /**
      * Attribute tag of the balloon background image for key press. Defined
      * inside {@link #XMLTAG_SKB_TEMPLATE} and {@link #XMLTAG_KEYBOARD}.
      */
-    private static final String XMLATTR_BALLOON_BG = "balloon_bg";
+    private static final String XML_ATTR_BALLOON_BG = "balloon_bg";
 
     /**
      * Attribute tag of the popup balloon background image for key press or
      * popup mini keyboard. Defined inside {@link #XMLTAG_SKB_TEMPLATE} and
      * {@link #XMLTAG_KEYBOARD}.
      */
-    private static final String XMLATTR_POPUP_BG = "popup_bg";
+    private static final String XML_ATTR_POPUP_BG = "popup_bg";
 
     /**
      * Attribute tag of the color to draw key label. Defined inside
      * {@link #XMLTAG_SKB_TEMPLATE} and {@link #XMLTAG_KEYTYPE}.
      */
-    private static final String XMLATTR_COLOR = "color";
+    private static final String XML_ATTR_COLOR = "color";
 
     /**
      * Attribute tag of the color to draw key's highlighted label. Defined
      * inside {@link #XMLTAG_SKB_TEMPLATE} and {@link #XMLTAG_KEYTYPE}.
      */
-    private static final String XMLATTR_COLOR_HIGHLIGHT = "color_highlight";
+    private static final String XML_ATTR_COLOR_HIGHLIGHT = "color_highlight";
 
     /**
      * Attribute tag of the color to draw key's label in the popup balloon.
      * Defined inside {@link #XMLTAG_SKB_TEMPLATE} and {@link #XMLTAG_KEYTYPE}.
      */
-    private static final String XMLATTR_COLOR_BALLOON = "color_balloon";
+    private static final String XML_ATTR_COLOR_BALLOON = "color_balloon";
 
     /**
      * Attribute tag of the id of {@link #XMLTAG_KEYTYPE} and
@@ -111,19 +112,19 @@ public class XmlKeyboardLoader {
      * has id), the id is used to find the default definition from the soft
      * keyboard template.
      */
-    private static final String XMLATTR_ID = "id";
+    private static final String XML_ATTR_ID = "id";
 
     /**
      * Attribute tag of the key background for a specified key type. Defined
      * inside {@link #XMLTAG_KEYTYPE}.
      */
-    private static final String XMLATTR_KEYTYPE_BG = "bg";
+    private static final String XML_ATTR_KEYTYPE_BG = "bg";
 
     /**
      * Attribute tag of the key high-light background for a specified key type.
      * Defined inside {@link #XMLTAG_KEYTYPE}.
      */
-    private static final String XMLATTR_KEYTYPE_HLBG = "hlbg";
+    private static final String XML_ATTR_KEYTYPE_HLBG = "hlbg";
 
     /**
      * Attribute tag of the starting x-position of an element. It can be defined
@@ -132,7 +133,7 @@ public class XmlKeyboardLoader {
      * {@link #XMLTAG_KEYBOARD}, it always use its previous keys information to
      * calculate its own position.
      */
-    private static final String XMLATTR_START_POS_X = "start_pos_x";
+    private static final String XML_ATTR_START_POS_X = "start_pos_x";
 
     /**
      * Attribute tag of the starting y-position of an element. It can be defined
@@ -141,7 +142,7 @@ public class XmlKeyboardLoader {
      * {@link #XMLTAG_KEYBOARD}, it always use its previous keys information to
      * calculate its own position.
      */
-    private static final String XMLATTR_START_POS_Y = "start_pos_y";
+    private static final String XML_ATTR_START_POS_Y = "start_pos_y";
 
     /**
      * Attribute tag of a row's id. Defined {@link #XMLTAG_ROW}. If not defined,
@@ -149,7 +150,7 @@ public class XmlKeyboardLoader {
      * row id will be enabled when the id is the same to the activated id of the
      * soft keyboard.
      */
-    private static final String XMLATTR_ROW_ID = "row_id";
+    private static final String XML_ATTR_ROW_ID = "row_id";
 
     /** The tag used to indicate the keyboard element in the xml file. */
     private static final String XMLTAG_KEYBOARD = "keyboard";
@@ -170,21 +171,21 @@ public class XmlKeyboardLoader {
     /** The tag used to indicate a key's toggle element in the xml file. */
     private static final String XMLTAG_TOGGLE_STATE = "toggle_state";
 
+    /** Attribute tag of key template for the soft keyboard. */
+    private static final String XML_ATTR_SKB_TEMPLATE = "skb_template";
+
     /**
      * Attribute tag of the toggle state id for toggle key. Defined inside
      * {@link #XMLTAG_TOGGLE_STATE}
      */
-    private static final String XMLATTR_TOGGLE_STATE_ID = "state_id";
-
-    /** Attribute tag of key template for the soft keyboard. */
-    private static final String XMLATTR_SKB_TEMPLATE = "skb_template";
+    private static final String XML_ATTR_TOGGLE_STATE_ID = "state_id";
 
     /**
      * Attribute tag used to indicate whether this soft keyboard needs to be
      * cached in memory for future use. {@link #DEFAULT_SKB_CACHE_FLAG}
      * specifies the default value.
      */
-    private static final String XMLATTR_SKB_CACHE_FLAG = "skb_cache_flag";
+    private static final String XML_ATTR_SKB_CACHE_FLAG = "skb_cache_flag";
 
     /**
      * Attribute tag used to indicate whether this soft keyboard is sticky. A
@@ -193,55 +194,55 @@ public class XmlKeyboardLoader {
      * back to the previous keyboard after click a none-function key.
      * {@link #DEFAULT_SKB_STICKY_FLAG} specifies the default value.
      */
-    private static final String XMLATTR_SKB_STICKY_FLAG = "skb_sticky_flag";
+    private static final String XML_ATTR_SKB_STICKY_FLAG = "skb_sticky_flag";
 
     /** Attribute tag to indicate whether it is a QWERTY soft keyboard. */
-    private static final String XMLATTR_QWERTY = "qwerty";
+    private static final String XML_ATTR_QWERTY = "qwerty";
 
     /**
      * When the soft keyboard is a QWERTY one, this attribute tag to get the
      * information that whether it is defined in upper case.
      */
-    private static final String XMLATTR_QWERTY_UPPERCASE = "qwerty_uppercase";
+    private static final String XML_ATTR_QWERTY_UPPERCASE = "qwerty_uppercase";
 
     /** Attribute tag of key type. */
-    private static final String XMLATTR_KEY_TYPE = "key_type";
+    private static final String XML_ATTR_KEY_TYPE = "key_type";
 
     /** Attribute tag of key width. */
-    private static final String XMLATTR_KEY_WIDTH = "width";
+    private static final String XML_ATTR_KEY_WIDTH = "width";
 
     /** Attribute tag of key height. */
-    private static final String XMLATTR_KEY_HEIGHT = "height";
+    private static final String XML_ATTR_KEY_HEIGHT = "height";
 
     /** Attribute tag of the key's repeating ability. */
-    private static final String XMLATTR_KEY_REPEAT = "repeat";
+    private static final String XML_ATTR_KEY_REPEAT = "repeat";
 
     /** Attribute tag of the key's behavior for balloon. */
-    private static final String XMLATTR_KEY_BALLOON = "balloon";
+    private static final String XML_ATTR_KEY_BALLOON = "balloon";
 
     /** Attribute tag of the key splitter in a key array. */
-    private static final String XMLATTR_KEY_SPLITTER = "splitter";
+    private static final String XML_ATTR_KEY_SPLITTER = "splitter";
 
     /** Attribute tag of the key labels in a key array. */
-    private static final String XMLATTR_KEY_LABELS = "labels";
+    private static final String XML_ATTR_KEY_LABELS = "labels";
 
     /** Attribute tag of the key codes in a key array. */
-    private static final String XMLATTR_KEY_CODES = "codes";
+    private static final String XML_ATTR_KEY_CODES = "codes";
 
     /** Attribute tag of the key label in a key. */
-    private static final String XMLATTR_KEY_LABEL = "label";
+    private static final String XML_ATTR_KEY_LABEL = "label";
 
     /** Attribute tag of the key code in a key. */
-    private static final String XMLATTR_KEY_CODE = "code";
+    private static final String XML_ATTR_KEY_CODE = "code";
 
     /** Attribute tag of the key icon in a key. */
-    private static final String XMLATTR_KEY_ICON = "icon";
+    private static final String XML_ATTR_KEY_ICON = "icon";
 
     /** Attribute tag of the key's popup icon in a key. */
-    private static final String XMLATTR_KEY_ICON_POPUP = "icon_popup";
+    private static final String XML_ATTR_KEY_ICON_POPUP = "icon_popup";
 
     /** The id for a mini popup soft keyboard. */
-    private static final String XMLATTR_KEY_POPUP_SKBID = "popup_skb";
+    private static final String XML_ATTR_KEY_POPUP_SKBID = "popup_skb";
 
     private static boolean DEFAULT_SKB_CACHE_FLAG = true;
 
@@ -290,7 +291,7 @@ public class XmlKeyboardLoader {
      */
     boolean mNextEventFetched = false;
 
-    String mAttrTmp;
+//    String mAttrTmp;
 
     class KeyCommonAttributes {
         XmlResourceParser mXrp;
@@ -307,11 +308,11 @@ public class XmlKeyboardLoader {
 
         // Make sure the default object is not null.
         boolean getAttributes(KeyCommonAttributes defAttr) {
-            keyType = getInteger(mXrp, XMLATTR_KEY_TYPE, defAttr.keyType);
-            keyWidth = getFloat(mXrp, XMLATTR_KEY_WIDTH, defAttr.keyWidth);
-            keyHeight = getFloat(mXrp, XMLATTR_KEY_HEIGHT, defAttr.keyHeight);
-            repeat = getBoolean(mXrp, XMLATTR_KEY_REPEAT, defAttr.repeat);
-            balloon = getBoolean(mXrp, XMLATTR_KEY_BALLOON, defAttr.balloon);
+            keyType = getInteger(mXrp, XML_ATTR_KEY_TYPE, defAttr.keyType);
+            keyWidth = getFloat(mXrp, XML_ATTR_KEY_WIDTH, defAttr.keyWidth);
+            keyHeight = getFloat(mXrp, XML_ATTR_KEY_HEIGHT, defAttr.keyHeight);
+            repeat = getBoolean(mXrp, XML_ATTR_KEY_REPEAT, defAttr.repeat);
+            balloon = getBoolean(mXrp, XML_ATTR_KEY_BALLOON, defAttr.balloon);
             if (keyType < 0 || keyWidth <= 0 || keyHeight <= 0) {
                 return false;
             }
@@ -345,11 +346,11 @@ public class XmlKeyboardLoader {
                 mNextEventFetched = false;
                 if (mXmlEventType == XmlResourceParser.START_TAG) {
                     String attribute = xrp.getName();
-                    if (XMLTAG_SKB_TEMPLATE.compareTo(attribute) == 0) {
-                        Drawable skbBg = getDrawable(xrp, XMLATTR_SKB_BG, null);
+                    if (XMLTAG_SKB_TEMPLATE.equals(attribute)) {
+                        Drawable skbBg = getDrawable(xrp, XML_ATTR_SKB_BG, null);
                         Drawable balloonBg = getDrawable(xrp,
-                                XMLATTR_BALLOON_BG, null);
-                        Drawable popupBg = getDrawable(xrp, XMLATTR_POPUP_BG,
+                                XML_ATTR_BALLOON_BG, null);
+                        Drawable popupBg = getDrawable(xrp, XML_ATTR_POPUP_BG,
                                 null);
                         if (null == skbBg || null == balloonBg
                                 || null == popupBg) {
@@ -357,25 +358,25 @@ public class XmlKeyboardLoader {
                         }
                         mSkbTemplate.setBackgrounds(skbBg, balloonBg, popupBg);
 
-                        float xMargin = getFloat(xrp, XMLATTR_KEY_XMARGIN, 0);
-                        float yMargin = getFloat(xrp, XMLATTR_KEY_YMARGIN, 0);
+                        float xMargin = getFloat(xrp, XML_ATTR_KEY_XMARGIN, 0);
+                        float yMargin = getFloat(xrp, XML_ATTR_KEY_YMARGIN, 0);
                         mSkbTemplate.setMargins(xMargin, yMargin);
 
                         // Get default global colors.
-                        globalColor = getColor(xrp, XMLATTR_COLOR, 0);
-                        globalColorHl = getColor(xrp, XMLATTR_COLOR_HIGHLIGHT,
+                        globalColor = getColor(xrp, XML_ATTR_COLOR, 0);
+                        globalColorHl = getColor(xrp, XML_ATTR_COLOR_HIGHLIGHT,
                                 0xffffffff);
                         globalColorBalloon = getColor(xrp,
-                                XMLATTR_COLOR_BALLOON, 0xffffffff);
-                    } else if (XMLTAG_KEYTYPE.compareTo(attribute) == 0) {
-                        int id = getInteger(xrp, XMLATTR_ID, KEYTYPE_ID_LAST);
-                        Drawable bg = getDrawable(xrp, XMLATTR_KEYTYPE_BG, null);
-                        Drawable hlBg = getDrawable(xrp, XMLATTR_KEYTYPE_HLBG,
+                                XML_ATTR_COLOR_BALLOON, 0xffffffff);
+                    } else if (XMLTAG_KEYTYPE.equals(attribute)) {
+                        int id = getInteger(xrp, XML_ATTR_ID, KEYTYPE_ID_LAST);
+                        Drawable bg = getDrawable(xrp, XML_ATTR_KEYTYPE_BG, null);
+                        Drawable hlBg = getDrawable(xrp, XML_ATTR_KEYTYPE_HLBG,
                                 null);
-                        int color = getColor(xrp, XMLATTR_COLOR, globalColor);
-                        int colorHl = getColor(xrp, XMLATTR_COLOR_HIGHLIGHT,
+                        int color = getColor(xrp, XML_ATTR_COLOR, globalColor);
+                        int colorHl = getColor(xrp, XML_ATTR_COLOR_HIGHLIGHT,
                                 globalColorHl);
-                        int colorBalloon = getColor(xrp, XMLATTR_COLOR_BALLOON,
+                        int colorBalloon = getColor(xrp, XML_ATTR_COLOR_BALLOON,
                                 globalColorBalloon);
                         if (id != lastKeyTypeId + 1) {
                             return null;
@@ -387,17 +388,17 @@ public class XmlKeyboardLoader {
                             return null;
                         }
                         lastKeyTypeId = id;
-                    } else if (XMLTAG_KEYICON.compareTo(attribute) == 0) {
-                        int keyCode = getInteger(xrp, XMLATTR_KEY_CODE, 0);
-                        Drawable icon = getDrawable(xrp, XMLATTR_KEY_ICON, null);
+                    } else if (XMLTAG_KEYICON.equals(attribute)) {
+                        int keyCode = getInteger(xrp, XML_ATTR_KEY_CODE, 0);
+                        Drawable icon = getDrawable(xrp, XML_ATTR_KEY_ICON, null);
                         Drawable iconPopup = getDrawable(xrp,
-                                XMLATTR_KEY_ICON_POPUP, null);
+                                XML_ATTR_KEY_ICON_POPUP, null);
                         if (null != icon && null != iconPopup) {
                             mSkbTemplate.addDefaultKeyIcons(keyCode, icon,
                                     iconPopup);
                         }
-                    } else if (XMLTAG_KEY.compareTo(attribute) == 0) {
-                        int keyId = this.getInteger(xrp, XMLATTR_ID, -1);
+                    } else if (XMLTAG_KEY.equals(attribute)) {
+                        int keyId = this.getInteger(xrp, XML_ATTR_ID, -1);
                         if (-1 == keyId) return null;
 
                         if (!attrKey.getAttributes(attrDef)) {
@@ -405,8 +406,8 @@ public class XmlKeyboardLoader {
                         }
 
                         // Update the key position for the key.
-                        mKeyXPos = getFloat(xrp, XMLATTR_START_POS_X, 0);
-                        mKeyYPos = getFloat(xrp, XMLATTR_START_POS_Y, 0);
+                        mKeyXPos = getFloat(xrp, XML_ATTR_START_POS_X, 0);
+                        mKeyYPos = getFloat(xrp, XML_ATTR_START_POS_Y, 0);
 
                         SoftKey softKey = getSoftKey(xrp, attrKey);
                         if (null == softKey) return null;
@@ -458,10 +459,9 @@ public class XmlKeyboardLoader {
                 if (mXmlEventType == XmlResourceParser.START_TAG) {
                     String attr = xrp.getName();
                     // 1. Is it the root element, "keyboard"?
-                    if (XMLTAG_KEYBOARD.compareTo(attr) == 0) {
+                    if (XMLTAG_KEYBOARD.equals(attr)) {
                         // 1.1 Get the keyboard template id.
-                        int skbTemplateId = xrp.getAttributeResourceValue(null,
-                                XMLATTR_SKB_TEMPLATE, 0);
+                        int skbTemplateId = xrp.getAttributeResourceValue(null, XML_ATTR_SKB_TEMPLATE, 0);
 
                         // 1.2 Try to get the template from pool. If it is not
                         // in, the pool will try to load it.
@@ -473,28 +473,22 @@ public class XmlKeyboardLoader {
                             return null;
                         }
 
-                        boolean cacheFlag = getBoolean(xrp,
-                                XMLATTR_SKB_CACHE_FLAG, DEFAULT_SKB_CACHE_FLAG);
-                        boolean stickyFlag = getBoolean(xrp,
-                                XMLATTR_SKB_STICKY_FLAG,
-                                DEFAULT_SKB_STICKY_FLAG);
-                        boolean isQwerty = getBoolean(xrp, XMLATTR_QWERTY,
-                                false);
-                        boolean isQwertyUpperCase = getBoolean(xrp,
-                                XMLATTR_QWERTY_UPPERCASE, false);
+                        boolean cacheFlag = getBoolean(xrp, XML_ATTR_SKB_CACHE_FLAG, DEFAULT_SKB_CACHE_FLAG);
+                        boolean stickyFlag = getBoolean(xrp, XML_ATTR_SKB_STICKY_FLAG, DEFAULT_SKB_STICKY_FLAG);
+                        boolean isQwerty = getBoolean(xrp, XML_ATTR_QWERTY, false);
+                        boolean isQwertyUpperCase = getBoolean(xrp, XML_ATTR_QWERTY_UPPERCASE, false);
 
                         softKeyboard = new SoftKeyboard(resourceId,
                                 mSkbTemplate, mSkbWidth, mSkbHeight);
                         softKeyboard.setFlags(cacheFlag, stickyFlag, isQwerty,
                                 isQwertyUpperCase);
 
-                        mKeyXMargin = getFloat(xrp, XMLATTR_KEY_XMARGIN,
-                                mSkbTemplate.getXMargin());
-                        mKeyYMargin = getFloat(xrp, XMLATTR_KEY_YMARGIN,
-                                mSkbTemplate.getYMargin());
-                        skbBg = getDrawable(xrp, XMLATTR_SKB_BG, null);
-                        popupBg = getDrawable(xrp, XMLATTR_POPUP_BG, null);
-                        balloonBg = getDrawable(xrp, XMLATTR_BALLOON_BG, null);
+                        mKeyXMargin = getFloat(xrp, XML_ATTR_KEY_XMARGIN, mSkbTemplate.getXMargin());
+                        mKeyYMargin = getFloat(xrp, XML_ATTR_KEY_YMARGIN, mSkbTemplate.getYMargin());
+
+                        skbBg = getDrawable(xrp, XML_ATTR_SKB_BG, null);
+                        popupBg = getDrawable(xrp, XML_ATTR_POPUP_BG, null);
+                        balloonBg = getDrawable(xrp, XML_ATTR_BALLOON_BG, null);
                         if (null != skbBg) {
                             softKeyboard.setSkbBackground(skbBg);
                         }
@@ -505,29 +499,26 @@ public class XmlKeyboardLoader {
                             softKeyboard.setKeyBalloonBackground(balloonBg);
                         }
                         softKeyboard.setKeyMargins(mKeyXMargin, mKeyYMargin);
-                    } else if (XMLTAG_ROW.compareTo(attr) == 0) {
+                    } else if (XMLTAG_ROW.equals(attr)) {
                         if (!attrRow.getAttributes(attrSkb)) {
                             return null;
                         }
                         // Get the starting positions for the row.
-                        mKeyXPos = getFloat(xrp, XMLATTR_START_POS_X, 0);
-                        mKeyYPos = getFloat(xrp, XMLATTR_START_POS_Y, mKeyYPos);
-                        int rowId = getInteger(xrp, XMLATTR_ROW_ID,
+                        mKeyXPos = getFloat(xrp, XML_ATTR_START_POS_X, 0);
+                        mKeyYPos = getFloat(xrp, XML_ATTR_START_POS_Y, mKeyYPos);
+                        int rowId = getInteger(xrp, XML_ATTR_ROW_ID,
                                 KeyRow.ALWAYS_SHOW_ROW_ID);
                         softKeyboard.beginNewRow(rowId, mKeyYPos);
-                    } else if (XMLTAG_KEYS.compareTo(attr) == 0) {
+                    } else if (XMLTAG_KEYS.equals(attr)) {
                         if (null == softKeyboard) return null;
                         if (!attrKeys.getAttributes(attrRow)) {
                             return null;
                         }
 
-                        String splitter = xrp.getAttributeValue(null,
-                                XMLATTR_KEY_SPLITTER);
+                        String splitter = xrp.getAttributeValue(null, XML_ATTR_KEY_SPLITTER);
                         splitter = Pattern.quote(splitter);
-                        String labels = xrp.getAttributeValue(null,
-                                XMLATTR_KEY_LABELS);
-                        String codes = xrp.getAttributeValue(null,
-                                XMLATTR_KEY_CODES);
+                        String labels = xrp.getAttributeValue(null, XML_ATTR_KEY_LABELS);
+                        String codes = xrp.getAttributeValue(null, XML_ATTR_KEY_CODES);
                         if (null == splitter || null == labels) {
                             return null;
                         }
@@ -546,17 +537,14 @@ public class XmlKeyboardLoader {
                             if (null != codeArr) {
                                 keyCode = Integer.valueOf(codeArr[i]);
                             }
-                                softKey.setKeyAttribute(keyCode, labelArr[i],
-                                    attrKeys.repeat, attrKeys.balloon);
+                            softKey.setKeyAttribute(keyCode, labelArr[i], attrKeys.repeat, attrKeys.balloon);
 
-                            softKey.setKeyType(mSkbTemplate
-                                    .getKeyType(attrKeys.keyType), null, null);
+                            softKey.setKeyType(mSkbTemplate.getKeyType(attrKeys.keyType), null, null);
 
                             float left, right, top, bottom;
                             left = mKeyXPos;
-
-                            right = left + attrKeys.keyWidth;
                             top = mKeyYPos;
+                            right = left + attrKeys.keyWidth;
                             bottom = top + attrKeys.keyHeight;
 
                             if (right - left < 2 * mKeyXMargin) return null;
@@ -569,7 +557,7 @@ public class XmlKeyboardLoader {
                                 return null;
                             }
                         }
-                    } else if (XMLTAG_KEY.compareTo(attr) == 0) {
+                    } else if (XMLTAG_KEY.equals(attr)) {
                         if (null == softKeyboard) {
                             return null;
                         }
@@ -577,7 +565,7 @@ public class XmlKeyboardLoader {
                             return null;
                         }
 
-                        int keyId = this.getInteger(xrp, XMLATTR_ID, -1);
+                        int keyId = this.getInteger(xrp, XML_ATTR_ID, -1);
                         if (keyId >= 0) {
                             softKey = mSkbTemplate.getDefaultKey(keyId);
                         } else {
@@ -597,7 +585,8 @@ public class XmlKeyboardLoader {
                         // be updated.
                         if (mXmlEventType == XmlResourceParser.START_TAG) {
                             attr = xrp.getName();
-                            if (XMLTAG_ROW.compareTo(attr) == 0) {
+                            if (XMLTAG_ROW.equals(attr)) {
+                                Log.i("cpl","too much toggling : " + softKey.getKeyLabel());
                                 mKeyYPos += attrRow.keyHeight;
                                 if ((int) mKeyYPos * mSkbHeight > mSkbHeight) {
                                     return null;
@@ -608,7 +597,7 @@ public class XmlKeyboardLoader {
                     }
                 } else if (mXmlEventType == XmlResourceParser.END_TAG) {
                     String attr = xrp.getName();
-                    if (XMLTAG_ROW.compareTo(attr) == 0) {
+                    if (XMLTAG_ROW.equals(attr)) {
                         mKeyYPos += attrRow.keyHeight;
                         if ((int) mKeyYPos * mSkbHeight > mSkbHeight) {
                             return null;
@@ -634,12 +623,15 @@ public class XmlKeyboardLoader {
     private SoftKey getSoftKey(XmlResourceParser xrp,
             KeyCommonAttributes attrKey) throws XmlPullParserException,
             IOException {
-        int keyCode = getInteger(xrp, XMLATTR_KEY_CODE, 0);
-        String keyLabel = getString(xrp, XMLATTR_KEY_LABEL, null);
-        Drawable keyIcon = getDrawable(xrp, XMLATTR_KEY_ICON, null);
-        Drawable keyIconPopup = getDrawable(xrp, XMLATTR_KEY_ICON_POPUP, null);
+        int keyCode = getInteger(xrp, XML_ATTR_KEY_CODE, 0);
+        String keyLabel = getString(xrp, XML_ATTR_KEY_LABEL, null);
+        Drawable keyIcon = getDrawable(xrp, XML_ATTR_KEY_ICON, null);
+        Drawable keyIconPopup = getDrawable(xrp, XML_ATTR_KEY_ICON_POPUP, null);
+        if (keyIcon != null || keyIconPopup != null) {
+            Log.i("cpl","keyicon not null, its label : " + keyLabel + "  key code is : " + keyCode);
+        }
         int popupSkbId = xrp.getAttributeResourceValue(null,
-                XMLATTR_KEY_POPUP_SKBID, 0);
+                XML_ATTR_KEY_POPUP_SKBID, 0);
 
         if (null == keyLabel && null == keyIcon) {
             keyIcon = mSkbTemplate.getDefaultKeyIcon(keyCode);
@@ -668,8 +660,8 @@ public class XmlKeyboardLoader {
 
         SoftKey softKey;
         if (mXmlEventType == XmlResourceParser.START_TAG) {
-            mAttrTmp = xrp.getName();
-            if (mAttrTmp.compareTo(XMLTAG_TOGGLE_STATE) == 0) {
+            String attrTmp = xrp.getName();
+            if (attrTmp.compareTo(XMLTAG_TOGGLE_STATE) == 0) {
                 toggleKey = true;
             }
         }
@@ -687,8 +679,7 @@ public class XmlKeyboardLoader {
         softKey.setKeyAttribute(keyCode, keyLabel, attrKey.repeat,
                 attrKey.balloon);
         softKey.setPopupSkbId(popupSkbId);
-        softKey.setKeyType(mSkbTemplate.getKeyType(attrKey.keyType), keyIcon,
-                keyIconPopup);
+        softKey.setKeyType(mSkbTemplate.getKeyType(attrKey.keyType), keyIcon, keyIconPopup);
 
         softKey.setKeyDimensions(left, top, right, bottom);
         return softKey;
@@ -698,25 +689,25 @@ public class XmlKeyboardLoader {
             KeyCommonAttributes attrKey, SoftKeyToggle softKey, int defKeyCode)
             throws XmlPullParserException, IOException {
         XmlResourceParser xrp = attrKey.mXrp;
-        int stateId = getInteger(xrp, XMLATTR_TOGGLE_STATE_ID, 0);
+        int stateId = getInteger(xrp, XML_ATTR_TOGGLE_STATE_ID, 0);
         if (0 == stateId) return null;
 
-        String keyLabel = getString(xrp, XMLATTR_KEY_LABEL, null);
-        int keyTypeId = getInteger(xrp, XMLATTR_KEY_TYPE, KEYTYPE_ID_LAST);
+        String keyLabel = getString(xrp, XML_ATTR_KEY_LABEL, null);
         int keyCode;
         if (null == keyLabel) {
-            keyCode = getInteger(xrp, XMLATTR_KEY_CODE, defKeyCode);
+            keyCode = getInteger(xrp, XML_ATTR_KEY_CODE, defKeyCode);
         } else {
-            keyCode = getInteger(xrp, XMLATTR_KEY_CODE, 0);
+            keyCode = getInteger(xrp, XML_ATTR_KEY_CODE, 0);
         }
-        Drawable icon = getDrawable(xrp, XMLATTR_KEY_ICON, null);
-        Drawable iconPopup = getDrawable(xrp, XMLATTR_KEY_ICON_POPUP, null);
+        Drawable icon = getDrawable(xrp, XML_ATTR_KEY_ICON, null);
+        Drawable iconPopup = getDrawable(xrp, XML_ATTR_KEY_ICON_POPUP, null);
         if (null == icon && null == keyLabel) {
             return null;
         }
         SoftKeyToggle.ToggleState rootState = softKey.createToggleState();
         rootState.setStateId(stateId);
         rootState.mKeyType = null;
+        int keyTypeId = getInteger(xrp, XML_ATTR_KEY_TYPE, KEYTYPE_ID_LAST);
         if (KEYTYPE_ID_LAST != keyTypeId) {
             rootState.mKeyType = mSkbTemplate.getKeyType(keyTypeId);
         }
@@ -725,8 +716,8 @@ public class XmlKeyboardLoader {
         rootState.mKeyIconPopup = iconPopup;
         rootState.mKeyLabel = keyLabel;
 
-        boolean repeat = getBoolean(xrp, XMLATTR_KEY_REPEAT, attrKey.repeat);
-        boolean balloon = getBoolean(xrp, XMLATTR_KEY_BALLOON, attrKey.balloon);
+        boolean repeat = getBoolean(xrp, XML_ATTR_KEY_REPEAT, attrKey.repeat);
+        boolean balloon = getBoolean(xrp, XML_ATTR_KEY_BALLOON, attrKey.balloon);
         rootState.setStateFlags(repeat, balloon);
 
         rootState.mNextState = null;

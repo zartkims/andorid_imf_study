@@ -20,7 +20,9 @@
   height="25%p"
   key_type="0"
   repeat="false"
-  balloon="true">
+  balloon="true"
+  skb_bg="@color/blue"
+    >
 
   <row>
     <keys splitter="|" labels="1|2|3|4|5|6|7|8|9|0"

@@ -17,6 +17,7 @@
 package com.android.inputmethod.pinyin;
 
 import com.android.inputmethod.pinyin.PinyinIME.DecodingInfo;
+import com.android.inputmethod.pinyin.constants.Constants;
 
 import java.util.Vector;
 
@@ -41,30 +42,15 @@ import android.view.ViewDebug;
  */
 public class CandidateView extends View {
 
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingLeft = 0;
-    /**
-     * The right padding in pixels, that is the distance in pixels between the
-     * right edge of this view and the right edge of its content.
-     * {@hide}
-     */
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingRight = 0;
-    /**
-     * The top padding in pixels, that is the distance in pixels between the
-     * top edge of this view and the top edge of its content.
-     * {@hide}
-     */
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingTop = 0;
-
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingBottom = 0;
+    protected int mPaddingLeft = Constants.LEFT_PADDING;
+    protected int mPaddingRight = Constants.RIGHT_PADDING;
+    protected int mPaddingTop = Constants.TOP_PADDING;
+    protected int mPaddingBottom = Constants.BOTTOM_PADDING;
 
     /**
      * The minimum width to show a item.
      */
-    private static final float MIN_ITEM_WIDTH = 22;
+    private static final float MIN_ITEM_WIDTH = 20;
 
     /**
      * Suspension points used to display long items.
@@ -72,7 +58,7 @@ public class CandidateView extends View {
     private static final String SUSPENSION_POINTS = "...";
 
     /**
-     * The width to draw candidates.
+     * The width to d   raw candidates.
      */
     private int mContentWidth;
 
@@ -100,7 +86,7 @@ public class CandidateView extends View {
     /**
      * Decoding result to show.
      */
-    private DecodingInfo mDecInfo;
+
 
     /**
      * Listener used to notify IME that user clicks a candidate, or navigate
@@ -118,7 +104,7 @@ public class CandidateView extends View {
      * If true, update the arrow status when drawing candidates.
      */
     private boolean mUpdateArrowStatusWhenDraw = false;
-
+    private DecodingInfo mDecInfo;
     /**
      * Page number of the page displayed in this view.
      */
@@ -314,8 +300,7 @@ public class CandidateView extends View {
         if (mCandidatesPaint.getTextSize() != mCandidateTextSize) {
             mCandidatesPaint.setTextSize(mCandidateTextSize);
             mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
-            mSuspensionPointsWidth =
-                    mCandidatesPaint.measureText(SUSPENSION_POINTS);
+            mSuspensionPointsWidth = mCandidatesPaint.measureText(SUSPENSION_POINTS);
         }
 
         // Remove any pending timer for the previous list.
@@ -382,6 +367,7 @@ public class CandidateView extends View {
         return false;
     }
 
+    private static int sDesiredCandidatesSize = 22;
     private void onSizeChanged() {
         mContentWidth = getMeasuredWidth() - mPaddingLeft - mPaddingRight;
         mContentHeight = (int) ((getMeasuredHeight() - mPaddingTop - mPaddingBottom) * 0.95f);
@@ -390,13 +376,24 @@ public class CandidateView extends View {
          * Now it is implemented in a stupid way.
          */
         int textSize = 1;
+//        mCandidatesPaint.setTextSize(textSize);
+//        mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
+//        while (mFmiCandidates.bottom - mFmiCandidates.top < mContentHeight) {
+//            textSize++;
+//            mCandidatesPaint.setTextSize(textSize);
+//            mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
+//        }
+//
+        textSize = (int) (sDesiredCandidatesSize * Constants.getDensity(getContext()));
         mCandidatesPaint.setTextSize(textSize);
         mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
-        while (mFmiCandidates.bottom - mFmiCandidates.top < mContentHeight) {
-            textSize++;
+
+        while (mFmiCandidates.bottom - mFmiCandidates.top > mContentHeight) { //大了就缩小一个等级
+            textSize--;
             mCandidatesPaint.setTextSize(textSize);
             mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
         }
+
 
         mImeCandidateTextSize = textSize;
         mRecommendedCandidateTextSize = textSize * 3 / 4;
@@ -428,6 +425,11 @@ public class CandidateView extends View {
         mActiveCandInPage = 0;
     }
 
+    /**
+     * 对候选词进行分页
+     * @param pageNo
+     * @return
+     */
     private boolean calculatePage(int pageNo) {
         if (pageNo == mPageNoCalculated) return true;
 
@@ -464,7 +466,7 @@ public class CandidateView extends View {
 
                 itemWidth += mCandidateMargin * 2;
                 itemWidth += mSeparatorDrawable.getIntrinsicWidth();
-                if (xPos + itemWidth < mContentWidth || 0 == pSize) {
+                if (xPos + itemWidth < mContentWidth || 0 == pSize) { //当为第一个的是候选词而且比较屏幕要小的时候
                     xPos += itemWidth;
                     lastItemWidth = itemWidth;
                     pSize++;

@@ -46,6 +46,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -1207,21 +1208,24 @@ public class PinyinIME extends InputMethodService {
         builder.setNegativeButton(android.R.string.cancel, null);
         CharSequence itemSettings = getString(R.string.ime_settings_activity_name);
         CharSequence itemInputMethod = "inputMethod";//getString(com.android.internal.R.string.inputMethod);
-        builder.setItems(new CharSequence[] {itemSettings, itemInputMethod},
+        builder.setItems(new CharSequence[] {itemSettings, itemInputMethod, "float"},
                 new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface di, int position) {
                         di.dismiss();
                         switch (position) {
-                        case 0:
-                            launchSettings();
-                            break;
-                        case 1:
-                            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                            imm.showInputMethodPicker();//cpl
-//                            InputMethodManager.getInstance()
-//                                    .showInputMethodPicker();
-                            break;
+                            case 0:
+                                launchSettings();
+                                break;
+                            case 1:
+                                InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+                                imm.showInputMethodPicker();//cpl
+//                               InputMethodManager.getInstance()
+//                                       .showInputMethodPicker();
+                                break;
+                            case 2:
+                                Toast.makeText(PinyinIME.this, "show the float modle", Toast.LENGTH_SHORT).show();
+                                break;
                         }
                     }
                 });

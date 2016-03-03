@@ -28,31 +28,18 @@ import android.view.View;
 import android.view.ViewDebug;
 import android.view.ViewGroup.LayoutParams;
 
+import com.android.inputmethod.pinyin.constants.Constants;
+
 /**
  * View used to show composing string (The Pinyin string for the unselected
  * syllables and the Chinese string for the selected syllables.)
  */
 public class ComposingView extends View {
 
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingLeft = 0;
-    /**
-     * The right padding in pixels, that is the distance in pixels between the
-     * right edge of this view and the right edge of its content.
-     * {@hide}
-     */
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingRight = 0;
-    /**
-     * The top padding in pixels, that is the distance in pixels between the
-     * top edge of this view and the top edge of its content.
-     * {@hide}
-     */
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingTop = 0;
-
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingBottom = 0;
+    protected int mPaddingLeft = Constants.LEFT_PADDING;
+    protected int mPaddingRight = Constants.RIGHT_PADDING;
+    protected int mPaddingTop = Constants.TOP_PADDING;
+    protected int mPaddingBottom = Constants.BOTTOM_PADDING;
 
     /**
      * <p>

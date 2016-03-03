@@ -24,6 +24,7 @@ import android.graphics.Paint.FontMetricsInt;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -201,14 +202,20 @@ public class BalloonHint extends PopupWindow {
 
     public void delayedUpdate(long delay, int locationInParent[],
             int width, int height) {
-        mBalloonView.invalidate();
+//        mBalloonView.invalidate();
         if (mBalloonTimer.isPending()) {
             mBalloonTimer.removeTimer();
         }
         if (delay <= 0) {
             mParent.getLocationInWindow(mParentLocationInWindow);
-            update(locationInParent[0], locationInParent[1]
-                    + mParentLocationInWindow[1], width, height);
+            Log.i("cpl", "delay update " + mBalloonView.mLabel);
+
+            this.dismiss();
+            showAtLocation(mParent, Gravity.LEFT | Gravity.TOP,
+                    locationInParent[0], locationInParent[1]
+                            + mParentLocationInWindow[1]);
+//            update(locationInParent[0], locationInParent[1]
+//                    + mParentLocationInWindow[1], width, height);
         } else {
             mBalloonTimer.startTimer(delay, BalloonTimer.ACTION_UPDATE,
                     locationInParent, width, height);
@@ -407,7 +414,7 @@ public class BalloonHint extends PopupWindow {
             mPaintLabel.setFakeBoldText(textBold);
             mPaintLabel.setColor(textColor);
             mFmi = mPaintLabel.getFontMetricsInt();
-            mSuspensionPointsWidth = mPaintLabel.measureText(SUSPENSION_POINTS);
+            mSuspensionPointsWidth = mPaintLabel.measureText(label);
         }
 
         @Override
@@ -435,8 +442,7 @@ public class BalloonHint extends PopupWindow {
                 measuredWidth = widthSize;
             }
 
-            if (heightSize > measuredHeight
-                    || heightMode == MeasureSpec.AT_MOST) {
+            if (heightSize > measuredHeight || heightMode == MeasureSpec.AT_MOST) {
                 measuredHeight = heightSize;
             }
 
@@ -463,6 +469,7 @@ public class BalloonHint extends PopupWindow {
                         height - marginBottom);
                 mIcon.draw(canvas);
             } else if (null != mLabel) {
+                Log.i("cpl","balloon on draw : " + mLabel);
                 float labelMeasuredWidth = mPaintLabel.measureText(mLabel);
                 float x = mPaddingLeft;
                 x += (width - labelMeasuredWidth - mPaddingLeft - mPaddingRight) / 2.0f;

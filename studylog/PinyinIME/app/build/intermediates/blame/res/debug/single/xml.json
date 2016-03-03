@@ -4,12 +4,12 @@
         "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/xml/skb_template1.xml"
     },
     {
-        "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/xml/method.xml",
-        "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/xml/method.xml"
-    },
-    {
         "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/xml/skb_phone.xml",
         "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/xml/skb_phone.xml"
+    },
+    {
+        "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/xml/method.xml",
+        "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/xml/method.xml"
     },
     {
         "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/xml/skb_smiley.xml",

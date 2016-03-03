@@ -20,6 +20,7 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.view.Display;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 /**
  * Global environment configurations for showing soft keyboard and candidate
@@ -54,13 +55,13 @@ public class Environment {
      * How much should the balloon width be larger than width of the real key.
      * It is relative to the smaller one of screen width and height.
      */
-    private static final float KEY_BALLOON_WIDTH_PLUS_RATIO = 0.08f;
+    private static final float KEY_BALLOON_WIDTH_PLUS_RATIO = 0.07f;
 
     /**
      * How much should the balloon height be larger than that of the real key.
      * It is relative to the smaller one of screen width and height.
      */
-    private static final float KEY_BALLOON_HEIGHT_PLUS_RATIO = 0.07f;
+    private static final float KEY_BALLOON_HEIGHT_PLUS_RATIO = 0.06f;
 
     /**
      * The text size for normal keys. It is relative to the smaller one of
@@ -123,7 +124,8 @@ public class Environment {
             mScreenHeight = d.getHeight();
 
             int scale;
-            if (mScreenHeight > mScreenWidth) {
+//            if (mScreenHeight > mScreenWidth) {
+            if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
                 mKeyHeight = (int) (mScreenHeight * KEY_HEIGHT_RATIO_PORTRAIT);
                 mCandidatesAreaHeight = (int) (mScreenHeight * CANDIDATES_AREA_HEIGHT_RATIO_PORTRAIT);
                 scale = mScreenWidth;

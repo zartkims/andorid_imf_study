@@ -15,27 +15,31 @@
 -->
 <skb_template
   skb_bg="@drawable/skb_bg"
-  key_xmargin="0%p"
-  key_ymargin="0%p"
+  key_xmargin="1%p"
+  key_ymargin="2%p"
   balloon_bg="@drawable/key_balloon_bg"
   popup_bg="@drawable/miniskb_bg"
   color="@color/label_color"
   color_highlight="@color/label_color"
   color_balloon="@color/balloon_color">
   <!-- Normal key -->
+
+    <!--bg="@drawable/normal_key_bg"-->
+    <!--hlbg="@drawable/normal_key_hl_bg"-->
   <key_type
     id="0"
-    bg="@drawable/normal_key_bg"
-    hlbg="@drawable/normal_key_hl_bg"
+    bg = "@color/half_transparent"
+    hlbg="@color/trans_purple"
     color_highlight="@color/label_color_hl0"/>
 
-  <!-- Function key -->
+  <!-- Function key 一般的功能键-->
   <key_type
     id="1"
     bg="@drawable/normal_key_bg"
     hlbg="@drawable/normal_key_hl_bg"/>
 
-  <!-- Light key, light is off -->
+  <!-- Light key, light is off
+  比如各种shift状态-->
   <key_type
     id="2"
     bg="@drawable/light_key_bg"

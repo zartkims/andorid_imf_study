@@ -17,17 +17,21 @@
 package com.android.inputmethod.pinyin;
 
 import com.android.inputmethod.pinyin.SoftKeyboard.KeyRow;
+import com.android.inputmethod.pinyin.constants.Constants;
 
 import java.util.List;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Paint.FontMetricsInt;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Vibrator;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewDebug;
 
@@ -40,25 +44,10 @@ import android.view.ViewDebug;
  */
 public class SoftKeyboardView extends View {
 
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingLeft = 0;
-    /**
-     * The right padding in pixels, that is the distance in pixels between the
-     * right edge of this view and the right edge of its content.
-     * {@hide}
-     */
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingRight = 0;
-    /**
-     * The top padding in pixels, that is the distance in pixels between the
-     * top edge of this view and the top edge of its content.
-     * {@hide}
-     */
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingTop = 0;
-
-    @ViewDebug.ExportedProperty(category = "padding")
-    protected int mPaddingBottom = 0;
+    protected int mPaddingLeft = Constants.LEFT_PADDING;
+    protected int mPaddingRight = Constants.RIGHT_PADDING;
+    protected int mPaddingTop = Constants.TOP_PADDING;
+    protected int mPaddingBottom = Constants.BOTTOM_PADDING;
 
     /**
      * The definition of the soft keyboard for the current this soft keyboard
@@ -128,12 +117,7 @@ public class SoftKeyboardView extends View {
     /** Vibration pattern for key press. */
     protected long[] mVibratePattern = new long[] {1, 20};
 
-    /**
-     * The dirty rectangle used to mark the area to re-draw during key press and
-     * release. Currently, whenever we can invalidate(Rect), view will call
-     * onDraw() and we MUST draw the whole view. This dirty information is for
-     * future use.
-     */
+
     private Rect mDirtyRect = new Rect();
 
     private Paint mPaint;
@@ -197,6 +181,8 @@ public class SoftKeyboardView extends View {
             boolean movePress) {
         long delay = BalloonHint.TIME_DELAY_SHOW;
         if (movePress) delay = 0;
+//        Log.i("cpl","delay : " + delay);
+//        delay = 0;
         if (balloon.needForceDismiss()) {
             balloon.delayedDismiss(0);
         }
@@ -206,7 +192,6 @@ public class SoftKeyboardView extends View {
             balloon.delayedUpdate(delay, balloonLocationToSkb, balloon
                     .getWidth(), balloon.getHeight());
         }
-        long b = System.currentTimeMillis();
     }
 
     public void resetKeyPress(long balloonDelay) {
@@ -244,7 +229,7 @@ public class SoftKeyboardView extends View {
         }
         if (moveWithinPreviousKey || null == mSoftKeyDown) return mSoftKeyDown;
         mKeyPressed = true;
-
+        //=====以上完成要显示的popup键======
         if (!movePress) {
             tryPlayKeyDown();
             tryVibrate();
@@ -317,8 +302,8 @@ public class SoftKeyboardView extends View {
             } else {
                 mBalloonPopup.setBalloonConfig(mSoftKeyDown.getKeyLabel(),
                         textSize, mSoftKeyDown.needBalloon(), mSoftKeyDown
-                                .getColorBalloon(), desired_width,
-                        desired_height);
+                                .getColorBalloon(), desired_width, desired_height);
+//                Log.i("cpl", "popup balloon key : " + mSoftKeyDown.getKeyLabel());
             }
 
             // The position to show.
@@ -373,6 +358,7 @@ public class SoftKeyboardView extends View {
                 mSoftKeyDown.mRight, mSoftKeyDown.mBottom);
 
         if (mRepeatForLongPress) {
+//            Log.i("cpl", "hte moving never hide : " + mMovingNeverHidePopupBalloon);
             if (mMovingNeverHidePopupBalloon) {
                 return onKeyPress(x, y, mLongPressTimer, true);
             }
@@ -384,6 +370,7 @@ public class SoftKeyboardView extends View {
             }
 
             if (mSoftKeyDown.needBalloon()) {
+                Log.i("!!!","key move need balllon");
                 mBalloonPopup.delayedDismiss(0);
             }
 
@@ -393,6 +380,7 @@ public class SoftKeyboardView extends View {
             return onKeyPress(x, y, mLongPressTimer, true);
         } else {
             // When user moves between keys, repeated response is disabled.
+//            Log.i("cpl", "not repeat for long press");
             return onKeyPress(x, y, mLongPressTimer, true);
         }
     }
@@ -448,6 +436,7 @@ public class SoftKeyboardView extends View {
         }
 
         if (mDimSkb) {
+            Log.i("!!!","");
             mPaint.setColor(0xa0000000);
             canvas.drawRect(0, 0, getWidth(), getHeight(), mPaint);
         }
@@ -467,11 +456,16 @@ public class SoftKeyboardView extends View {
             textColor = softKey.getColor();
         }
 
+//        Drawable d = new ColorDrawable(Color.BLUE);
+//        d.setBounds(softKey.mLeft, softKey.mTop, softKey.mRight, softKey.mBottom);
+//        d.draw(canvas);
+
         if (null != bg) {
             bg.setBounds(softKey.mLeft + keyXMargin, softKey.mTop + keyYMargin,
                     softKey.mRight - keyXMargin, softKey.mBottom - keyYMargin);
             bg.draw(canvas);
         }
+
 
         String keyLabel = softKey.getKeyLabel();
         Drawable keyIcon = softKey.getKeyIcon();
@@ -493,8 +487,24 @@ public class SoftKeyboardView extends View {
                     + (softKey.width() - mPaint.measureText(keyLabel)) / 2.0f;
             int fontHeight = mFmi.bottom - mFmi.top;
             float marginY = (softKey.height() - fontHeight) / 2.0f;
-            float y = softKey.mTop + marginY - mFmi.top + mFmi.bottom / 1.5f;
+            float y = softKey.mTop + marginY + keyYMargin * 2;
+//            float y = (softKey.mTop + softKey.mBottom) / 2.0f - fontHeight / 2.0f -mFmi.top;
             canvas.drawText(keyLabel, x, y + 1, mPaint);
         }
+
+//        int fontHeight = mFmi.bottom - mFmi.top;
+//        float marginY = (softKey.height() - fontHeight) / 2.0f;
+////            float y = softKey.mTop + marginY - mFmi.top + mFmi.bottom / 1.5f;
+//        float y = softKey.mBottom - marginY;
+//
+//        mPaint.setColor(Color.BLUE);
+//        canvas.drawLine(softKey.mLeft, softKey.mTop, softKey.mRight, softKey.mBottom, mPaint);
+//        canvas.drawLine(softKey.mLeft, softKey.height() / 2, softKey.mRight, softKey.height() / 2, mPaint);
+//        mPaint.setColor(Color.RED);
+//        canvas.drawLine(softKey.mLeft, y, softKey.mRight, y, mPaint);
+//        mPaint.setColor(Color.YELLOW);
+//        canvas.drawLine(softKey.mLeft, y, softKey.mRight, y - fontHeight, mPaint);
+//        mPaint.setColor(Color.GREEN);
+//        canvas.drawLine(softKey.mLeft, softKey.mTop + mFmi.bottom, softKey.mRight, softKey.mTop + mFmi.top, mPaint);
     }
 }

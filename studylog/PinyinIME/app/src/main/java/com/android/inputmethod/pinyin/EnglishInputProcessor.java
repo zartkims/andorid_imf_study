@@ -43,8 +43,10 @@ public class EnglishInputProcessor {
                 keyChar = keyChar + 'A' - 'a';
             }
         } else if (keyCode >= KeyEvent.KEYCODE_0
-                && keyCode <= KeyEvent.KEYCODE_9)
+                && keyCode <= KeyEvent.KEYCODE_9){
+
             keyChar = keyCode - KeyEvent.KEYCODE_0 + '0';
+        }
         else if (keyCode == KeyEvent.KEYCODE_COMMA)
             keyChar = ',';
         else if (keyCode == KeyEvent.KEYCODE_PERIOD)
@@ -81,7 +83,7 @@ public class EnglishInputProcessor {
             return true;
 
         if (KeyEvent.KEYCODE_SHIFT_LEFT == mLastKeyCode
-                || KeyEvent.KEYCODE_SHIFT_LEFT == mLastKeyCode) {
+                || KeyEvent.KEYCODE_SHIFT_RIGHT == mLastKeyCode) {
             if (keyChar >= 'a' && keyChar <= 'z')
                 keyChar = keyChar - 'a' + 'A';
         } else if (KeyEvent.KEYCODE_ALT_LEFT == mLastKeyCode) {
