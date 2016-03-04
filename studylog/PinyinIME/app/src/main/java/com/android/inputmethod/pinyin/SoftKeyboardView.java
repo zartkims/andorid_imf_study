@@ -488,6 +488,7 @@ public class SoftKeyboardView extends View {
             int fontHeight = mFmi.bottom - mFmi.top;
             float marginY = (softKey.height() - fontHeight) / 2.0f;
             float y = softKey.mTop + marginY + keyYMargin * 2;
+//            float y = softKey.mTop + marginY - mFmi.top;
 //            float y = (softKey.mTop + softKey.mBottom) / 2.0f - fontHeight / 2.0f -mFmi.top;
             canvas.drawText(keyLabel, x, y + 1, mPaint);
         }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="active_candidate_color">#ff000000</color>
+    <color name="active_candidate_color">#ffe52e33</color>
     <color name="balloon_color">#ff000000</color>
     <color name="black">#ff000000</color>
     <color name="blue">#ff00ddff</color>
@@ -9,11 +9,13 @@
     <color name="composing_color_hl">#ffffffff</color>
     <color name="composing_color_idle">#ffdddddd</color>
     <color name="footnote_color">#ff343233</color>
+    <color name="grey">#ffcccccc</color>
     <color name="half_transparent">#30000000</color>
     <color name="label_color">#ffffffff</color>
     <color name="label_color_hl0">#ffffffff</color>
     <color name="recommended_candidate_color">#ffe35900</color>
     <color name="trans_purple">#7fff69b4</color>
+    <color name="white">#ffffffff</color>
     <dimen name="candview_background_padding">0dip</dimen>
     <string name="ime_name">谷歌拼音输入法</string>
     <string name="ime_settings_activity_name">谷歌拼音输入法设置</string>

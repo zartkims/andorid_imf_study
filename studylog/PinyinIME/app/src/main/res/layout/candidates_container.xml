@@ -13,7 +13,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.inputmethod.pinyin.CandidatesContainer xmlns:android="http://schemas.android.com/apk/res/android"
+<com.android.inputmethod.pinyin.CandidatesContainer
+  xmlns:android="http://schemas.android.com/apk/res/android"
   android:id="@+id/candidates_container"
   android:background="@drawable/cands_container_bg"
   android:orientation="horizontal"

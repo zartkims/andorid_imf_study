@@ -286,9 +286,10 @@ public class CandidatesContainer extends RelativeLayout implements
 
         mCurrentPage--;
         int activeCandInPage = cv.getActiveCandiatePosInPage();
-        if (animLeftRight)
+        if (animLeftRight) {
             activeCandInPage = mDecInfo.mPageStart.elementAt(mCurrentPage + 1)
                     - mDecInfo.mPageStart.elementAt(mCurrentPage) - 1;
+        }
 
         cvNext.showPage(mCurrentPage, activeCandInPage, enableActiveHighlight);
         loadAnimation(animLeftRight, false);
