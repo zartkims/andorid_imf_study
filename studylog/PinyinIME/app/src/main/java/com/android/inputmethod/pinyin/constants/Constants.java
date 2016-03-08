@@ -8,8 +8,8 @@ import android.content.Context;
 public class Constants {
     public static final int LEFT_PADDING = 5;
     public static final int RIGHT_PADDING = 5;
-    public static final int TOP_PADDING = 5;
-    public static final int BOTTOM_PADDING = 5;
+    public static final int TOP_PADDING = 2;
+    public static final int BOTTOM_PADDING = 2;
     private static float sDensity = 0;
     public static float getDensity(Context context) {
         if (sDensity == 0) {

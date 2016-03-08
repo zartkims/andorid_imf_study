@@ -50,6 +50,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 import java.util.Vector;
 
 /**
@@ -1506,7 +1507,7 @@ public class PinyinIME extends InputMethodService {
         STATE_APP_COMPLETION
     }
 
-    public class DecodingInfo {
+    public class DecodingInfo extends Observable {
         /**
          * Maximum length of the Pinyin string
          */
@@ -1919,12 +1920,18 @@ public class PinyinIME extends InputMethodService {
             return mCandidatesList.get(candId);
         }
 
+        //cpl
+        public void loadMore(int num) {
+            getCandiagtesForCache();
+        }
+
         private void getCandiagtesForCache() {
             int fetchStart = mCandidatesList.size();
             int fetchSize = mTotalChoicesNum - fetchStart;
             if (fetchSize > MAX_PAGE_SIZE_DISPLAY) {
                 fetchSize = MAX_PAGE_SIZE_DISPLAY;
             }
+            fetchSize = 32;
             try {
                 List<String> newList = null;
                 if (ImeState.STATE_INPUT == mImeState ||
@@ -1948,6 +1955,12 @@ public class PinyinIME extends InputMethodService {
                     }
                 }
                 mCandidatesList.addAll(newList);
+                setChanged();
+                notifyObservers();
+                for (String s : mCandidatesList) {
+                    Log.i("cpl","-----" + s + "-----");
+                }
+                Log.i("cpl","======" + mCandidatesList.size() + "=======");
             } catch (RemoteException e) {
                 Log.w(TAG, "PinyinDecoderService died", e);
             }

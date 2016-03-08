@@ -37,18 +37,24 @@
     android:clickable="true"
     android:layout_alignParentRight="true"/>
 
-  <ViewFlipper android:id="@+id/candidate_flipper"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_toLeftOf="@id/arrow_right_btn"
-    android:layout_toRightOf="@id/arrow_left_btn">
-    <view class="com.android.inputmethod.pinyin.CandidateView"
-        android:id="@+id/candidate_view1"
+  <!--<ViewFlipper android:id="@+id/candidate_flipper"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_toLeftOf="@id/arrow_right_btn"-->
+    <!--android:layout_toRightOf="@id/arrow_left_btn">-->
+    <!--<view class="com.android.inputmethod.pinyin.CandidateView"-->
+        <!--android:id="@+id/candidate_view1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+    <!--<view class="com.android.inputmethod.pinyin.CandidateView"-->
+        <!--android:id="@+id/candidate_view2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+  <!--</ViewFlipper>-->
+    <com.android.inputmethod.pinyin.CandidateScrollView
+        android:id="@+id/my_scroll_candidate"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    <view class="com.android.inputmethod.pinyin.CandidateView"
-        android:id="@+id/candidate_view2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-  </ViewFlipper>
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/arrow_right_btn"
+        android:layout_toRightOf="@id/arrow_left_btn" />
 </com.android.inputmethod.pinyin.CandidatesContainer>

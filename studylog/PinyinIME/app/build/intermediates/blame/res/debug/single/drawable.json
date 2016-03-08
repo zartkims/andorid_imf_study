@@ -92,12 +92,12 @@
         "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/cands_container_bg.9.png"
     },
     {
-        "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/search_popup_icon.png",
-        "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/search_popup_icon.png"
-    },
-    {
         "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/composing_area_bg.9.png",
         "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/composing_area_bg.9.png"
+    },
+    {
+        "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/search_popup_icon.png",
+        "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/search_popup_icon.png"
     },
     {
         "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/emotion_icon_06.png",
@@ -176,12 +176,12 @@
         "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/light_key_up_hl_bg.9.png"
     },
     {
-        "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/num5.png",
-        "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/num5.png"
-    },
-    {
         "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/candidate_hl_bg.9.png",
         "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/candidate_hl_bg.9.png"
+    },
+    {
+        "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/num5.png",
+        "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/num5.png"
     },
     {
         "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/candidates_vertical_line.png",
@@ -364,12 +364,12 @@
         "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/period_icon.png"
     },
     {
-        "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/enter_popup_icon.png",
-        "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/enter_popup_icon.png"
-    },
-    {
         "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/emotion_icon_21_popup.png",
         "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/emotion_icon_21_popup.png"
+    },
+    {
+        "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/enter_popup_icon.png",
+        "source": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/drawable/enter_popup_icon.png"
     },
     {
         "merged": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/build/intermediates/res/merged/debug/drawable/light_key_up_bg.9.png",

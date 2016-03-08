@@ -33,6 +33,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -60,7 +61,7 @@ public class CandidateView extends View {
     private static final String SUSPENSION_POINTS = "...";
 
     /**
-     * The width to d   raw candidates.
+     * The width to draw candidates.
      */
     private int mContentWidth;
 
@@ -372,20 +373,12 @@ public class CandidateView extends View {
     private static int sDesiredCandidatesSize = 22;
     private void onSizeChanged() {
         mContentWidth = getMeasuredWidth() - mPaddingLeft - mPaddingRight;
-        mContentHeight = (int) ((getMeasuredHeight() - mPaddingTop - mPaddingBottom) * 0.95f);
+        mContentHeight = (int) ((getMeasuredHeight() - mPaddingTop - mPaddingBottom) * 0.98f);
         /**
          * How to decide the font size if the height for display is given?
          * Now it is implemented in a stupid way.
          */
         int textSize = 1;
-//        mCandidatesPaint.setTextSize(textSize);
-//        mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
-//        while (mFmiCandidates.bottom - mFmiCandidates.top < mContentHeight) {
-//            textSize++;
-//            mCandidatesPaint.setTextSize(textSize);
-//            mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
-//        }
-//
         textSize = (int) (sDesiredCandidatesSize * Constants.getDensity(getContext()));
         mCandidatesPaint.setTextSize(textSize);
         mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
@@ -505,6 +498,7 @@ public class CandidateView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        Log.i("cpl", "now is on Draw");
         // The invisible candidate view(the one which is not in foreground) can
         // also be called to drawn, but its decoding result and candidate list
         // may be empty.

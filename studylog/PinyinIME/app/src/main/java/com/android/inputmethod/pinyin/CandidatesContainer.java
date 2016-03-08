@@ -31,7 +31,6 @@ import android.view.animation.TranslateAnimation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
-import android.widget.ViewFlipper;
 
 interface ArrowUpdater {
     void updateArrowStatus();
@@ -90,8 +89,8 @@ public class CandidatesContainer extends RelativeLayout implements
      * Normally, the candidates are shown one of them. When user navigates to
      * another page, animation effect will be performed.
      */
-    private ViewFlipper mFlipper;
-
+//    private ViewFlipper mFlipper;
+     private CandidateScrollView mCandidateView;
     /**
      * The x offset of the flipper in this container.
      */
@@ -177,16 +176,19 @@ public class CandidatesContainer extends RelativeLayout implements
         mLeftArrowBtn.setOnTouchListener(this);
         mRightArrowBtn.setOnTouchListener(this);
 
-        mFlipper = (ViewFlipper) findViewById(R.id.candidate_flipper);
-        mFlipper.setMeasureAllChildren(true);
+        mCandidateView = (CandidateScrollView) findViewById(R.id.my_scroll_candidate);
+//        cpl
+//        mFlipper = (ViewFlipper) findViewById(R.id.candidate_flipper);
+//        mFlipper.setMeasureAllChildren(true);
 
         invalidate();
         requestLayout();
-
-        for (int i = 0; i < mFlipper.getChildCount(); i++) {
-            CandidateView cv = (CandidateView) mFlipper.getChildAt(i);
-            cv.initialize(this, balloonHint, gestureDetector, mCvListener);
-        }
+//cpl
+//        for (int i = 0; i < mFlipper.getChildCount(); i++) {
+//            CandidateView cv = (CandidateView) mFlipper.getChildAt(i);
+//            cv.initialize(this, balloonHint, gestureDetector, mCvListener);
+//        }
+        mCandidateView.initialize(this, mCvListener);
     }
 
     public void showCandidates(PinyinIME.DecodingInfo decInfo,
@@ -202,15 +204,17 @@ public class CandidatesContainer extends RelativeLayout implements
             showArrow(mLeftArrowBtn, true);
             showArrow(mRightArrowBtn, true);
         }
-
-        for (int i = 0; i < mFlipper.getChildCount(); i++) {
-            CandidateView cv = (CandidateView) mFlipper.getChildAt(i);
-            cv.setDecodingInfo(mDecInfo);
-        }
+//cpl
+//        for (int i = 0; i < mFlipper.getChildCount(); i++) {
+//            CandidateView cv = (CandidateView) mFlipper.getChildAt(i);
+//            cv.setDecodingInfo(mDecInfo);
+//        }
+        mCandidateView.setDecodingInfo(mDecInfo);
         stopAnimation();
 
-        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-        cv.showPage(mCurrentPage, 0, enableActiveHighlight);
+//        cpl
+//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
+//        cv.showPage(mCurrentPage, 0, enableActiveHighlight);
 
         updateArrowStatus();
         invalidate();
@@ -221,8 +225,10 @@ public class CandidatesContainer extends RelativeLayout implements
     }
 
     public void enableActiveHighlight(boolean enableActiveHighlight) {
-        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-        cv.enableActiveHighlight(enableActiveHighlight);
+//        cpl
+//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
+//        cv.enableActiveHighlight(enableActiveHighlight);
+        mCandidateView.enableActiveHighlight(enableActiveHighlight);
         invalidate();
     }
 
@@ -244,91 +250,99 @@ public class CandidatesContainer extends RelativeLayout implements
     }
 
     public boolean activeCurseBackward() {
-        if (mFlipper.isFlipping() || null == mDecInfo) {
-            return false;
-        }
-
-        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-
-        if (cv.activeCurseBackward()) {
-            cv.invalidate();
-            return true;
-        } else {
-            return pageBackward(true, true);
-        }
+//        cpl
+//        if (mFlipper.isFlipping() || null == mDecInfo) {
+//            return false;
+//        }
+//
+//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
+//
+//        if (cv.activeCurseBackward()) {
+//            cv.invalidate();
+//            return true;
+//        } else {
+//            return pageBackward(true, true);
+//        }
+        return  true;
     }
 
     public boolean activeCurseForward() {
-        if (mFlipper.isFlipping() || null == mDecInfo) {
-            return false;
-        }
-
-        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-
-        if (cv.activeCursorForward()) {
-            cv.invalidate();
-            return true;
-        } else {
-            return pageForward(true, true);
-        }
+//        cpl
+//        if (mFlipper.isFlipping() || null == mDecInfo) {
+//            return false;
+//        }
+//
+//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
+//
+//        if (cv.activeCursorForward()) {
+//            cv.invalidate();
+//            return true;
+//        } else {
+//            return pageForward(true, true);
+//        }
+        return true;
     }
 
     public boolean pageBackward(boolean animLeftRight,
             boolean enableActiveHighlight) {
-        if (null == mDecInfo) return false;
-
-        if (mFlipper.isFlipping() || 0 == mCurrentPage) return false;
-
-        int child = mFlipper.getDisplayedChild();
-        int childNext = (child + 1) % 2;
-        CandidateView cv = (CandidateView) mFlipper.getChildAt(child);
-        CandidateView cvNext = (CandidateView) mFlipper.getChildAt(childNext);
-
-        mCurrentPage--;
-        int activeCandInPage = cv.getActiveCandiatePosInPage();
-        if (animLeftRight) {
-            activeCandInPage = mDecInfo.mPageStart.elementAt(mCurrentPage + 1)
-                    - mDecInfo.mPageStart.elementAt(mCurrentPage) - 1;
-        }
-
-        cvNext.showPage(mCurrentPage, activeCandInPage, enableActiveHighlight);
-        loadAnimation(animLeftRight, false);
-        startAnimation();
-
-        updateArrowStatus();
+//        cpl
+//        if (null == mDecInfo) return false;
+//
+//        if (mFlipper.isFlipping() || 0 == mCurrentPage) return false;
+//
+//        int child = mFlipper.getDisplayedChild();
+//        int childNext = (child + 1) % 2;
+//        CandidateView cv = (CandidateView) mFlipper.getChildAt(child);
+//        CandidateView cvNext = (CandidateView) mFlipper.getChildAt(childNext);
+//
+//        mCurrentPage--;
+//        int activeCandInPage = cv.getActiveCandiatePosInPage();
+//        if (animLeftRight) {
+//            activeCandInPage = mDecInfo.mPageStart.elementAt(mCurrentPage + 1)
+//                    - mDecInfo.mPageStart.elementAt(mCurrentPage) - 1;
+//        }
+//
+//        cvNext.showPage(mCurrentPage, activeCandInPage, enableActiveHighlight);
+//        loadAnimation(animLeftRight, false);
+//        startAnimation();
+//
+//        updateArrowStatus();
         return true;
     }
 
     public boolean pageForward(boolean animLeftRight,
             boolean enableActiveHighlight) {
         if (null == mDecInfo) return false;
-
-        if (mFlipper.isFlipping() || !mDecInfo.preparePage(mCurrentPage + 1)) {
-            return false;
-        }
-
-        int child = mFlipper.getDisplayedChild();
-        int childNext = (child + 1) % 2;
-        CandidateView cv = (CandidateView) mFlipper.getChildAt(child);
-        int activeCandInPage = cv.getActiveCandiatePosInPage();
-        cv.enableActiveHighlight(enableActiveHighlight);
-
-        CandidateView cvNext = (CandidateView) mFlipper.getChildAt(childNext);
-        mCurrentPage++;
-        if (animLeftRight) activeCandInPage = 0;
-
-        cvNext.showPage(mCurrentPage, activeCandInPage, enableActiveHighlight);
-        loadAnimation(animLeftRight, true);
-        startAnimation();
-
-        updateArrowStatus();
+//        cpl
+//        if (mFlipper.isFlipping() || !mDecInfo.preparePage(mCurrentPage + 1)) {
+//            return false;
+//        }
+//
+//        int child = mFlipper.getDisplayedChild();
+//        int childNext = (child + 1) % 2;
+//        CandidateView cv = (CandidateView) mFlipper.getChildAt(child);
+//        int activeCandInPage = cv.getActiveCandiatePosInPage();
+//        cv.enableActiveHighlight(enableActiveHighlight);
+//
+//        CandidateView cvNext = (CandidateView) mFlipper.getChildAt(childNext);
+//        mCurrentPage++;
+//        if (animLeftRight) activeCandInPage = 0;
+//
+//        cvNext.showPage(mCurrentPage, activeCandInPage, enableActiveHighlight);
+//        loadAnimation(animLeftRight, true);
+//        startAnimation();
+//
+//        updateArrowStatus();
+        mDecInfo.loadMore(32);
         return true;
     }
 
     public int getActiveCandiatePos() {
         if (null == mDecInfo) return -1;
-        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-        return cv.getActiveCandiatePosGlobal();
+//        cpl
+//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
+//        return cv.getActiveCandiatePosGlobal();
+        return mCandidateView.getGlobalIndex();
     }
 
     public void updateArrowStatus() {
@@ -371,8 +385,11 @@ public class CandidatesContainer extends RelativeLayout implements
                 mCvListener.onToLeftGesture();
             }
         } else if (event.getAction() == MotionEvent.ACTION_UP) {
-            CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-            cv.enableActiveHighlight(true);
+//            cpl
+//            CandidateView cv = (CandidateView) mFlipper.getCurrentView();
+//            cv.enableActiveHighlight(true);
+              mCandidateView.enableActiveHighlight(true);
+
         }
 
         return false;
@@ -384,8 +401,10 @@ public class CandidatesContainer extends RelativeLayout implements
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         event.offsetLocation(-xOffsetForFlipper, 0);
-        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-        cv.onTouchEventReal(event);
+//        cpl
+//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
+//        cv.onTouchEventReal(event);
+        mCandidateView.onTouchEventReal(event);
         return true;
     }
 
@@ -433,9 +452,9 @@ public class CandidatesContainer extends RelativeLayout implements
         }
 
         mInAnimInUse.setAnimationListener(this);
-
-        mFlipper.setInAnimation(mInAnimInUse);
-        mFlipper.setOutAnimation(mOutAnimInUse);
+//cpl
+//        mFlipper.setInAnimation(mInAnimInUse);
+//        mFlipper.setOutAnimation(mOutAnimInUse);
     }
 
     private Animation createAnimation(float xFrom, float xTo, float yFrom,
@@ -453,17 +472,17 @@ public class CandidatesContainer extends RelativeLayout implements
     }
 
     private void startAnimation() {
-        mFlipper.showNext();
+//        mFlipper.showNext();
     }
 
     private void stopAnimation() {
-        mFlipper.stopFlipping();
+//        mFlipper.stopFlipping();
     }
 
     public void onAnimationEnd(Animation animation) {
         if (!mLeftArrowBtn.isPressed() && !mRightArrowBtn.isPressed()) {
-            CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-            cv.enableActiveHighlight(true);
+//            CandidateView cv = (CandidateView) mFlipper.getCurrentView();
+//            cv.enableActiveHighlight(true);
         }
     }
 
