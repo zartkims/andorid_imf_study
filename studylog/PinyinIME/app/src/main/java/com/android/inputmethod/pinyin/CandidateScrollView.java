@@ -6,19 +6,13 @@ import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.android.inputmethod.pinyin.ArrowUpdater;
-import com.android.inputmethod.pinyin.BalloonHint;
-import com.android.inputmethod.pinyin.CandidateViewListener;
 import com.android.inputmethod.pinyin.constants.Constants;
 import com.android.inputmethod.pinyin.constants.MYLOG;
 
@@ -31,15 +25,19 @@ import java.util.Vector;
  * Created by caipengli on 16年3月8日.
  */
 public class CandidateScrollView extends View implements Observer{
-    /**
-     * The minimum width to show a item.
+
+    /***
+     * 如果滑到了最后就留一定的空白告诉用户已经是最后了
      */
-    private static final float MIN_ITEM_WIDTH = 20;
+    private static int sBlankInTheEnd = 30;
+
     /**
      * 预期的字体大小 dp
+     * 从配置文件中读取
      */
     private static int sDesiredCandidatesSize = 22;
     private static int sMinCandidatesSize = 18;
+
 
     protected int mPaddingLeft = Constants.LEFT_PADDING;
     protected int mPaddingRight = Constants.RIGHT_PADDING;
@@ -105,11 +103,11 @@ public class CandidateScrollView extends View implements Observer{
         mActiveCellDrawable = r.getDrawable(R.drawable.bg_candidate_background);
         mSeparatorDrawable = r.getDrawable(R.drawable.candidates_vertical_line);
         mCandidateMargin = r.getDimension(R.dimen.candidate_margin_left_right);
-
         mImeCandidateColor = r.getColor(R.color.candidate_color);
         mRecommendedCandidateColor = r.getColor(R.color.recommended_candidate_color);
         mNormalCandidateColor = mImeCandidateColor;
         mActiveCandidateColor = r.getColor(R.color.active_candidate_color);
+        sBlankInTheEnd = (int) (sBlankInTheEnd * Constants.getDensity(context));
 
         mCandidatesPaint = new Paint();
         mCandidatesPaint.setAntiAlias(true);
@@ -120,7 +118,6 @@ public class CandidateScrollView extends View implements Observer{
     public void initialize(ArrowUpdater arrowUpdater, /*BalloonHint balloonHint,*/
                             CandidateViewListener cvListener) {
         mArrowUpdater = arrowUpdater;
-//        mBalloonHint = balloonHint;
         mCvListener = cvListener;
     }
 
@@ -128,7 +125,6 @@ public class CandidateScrollView extends View implements Observer{
         if (null == decInfo) return;
         mDecInfo = decInfo;
         mDecInfo.addObserver(this);
-//        mPageNoCalculated = -1;
 
         if (mDecInfo.candidatesFromApp()) {
             mNormalCandidateColor = mRecommendedCandidateColor;
@@ -140,11 +136,8 @@ public class CandidateScrollView extends View implements Observer{
         if (mCandidatesPaint.getTextSize() != mCurCandidateTextSize) {
             mCandidatesPaint.setTextSize(mCurCandidateTextSize);
             mFmiCandidates = mCandidatesPaint.getFontMetricsInt();
-//            mCurCandidateTextSize = mCandidatesPaint.measureText(SUSPENSION_POINTS);
         }
 
-        // Remove any pending timer for the previous list.
-//        mTimer.removeTimer();
     }
 
     @Override
@@ -189,8 +182,6 @@ public class CandidateScrollView extends View implements Observer{
             setDecodingInfo(mDecInfo);
         }
 
-        // When the size is changed, the first page will be displayed.
-//        mPageNo = 0;
         resetAll();
     }
 
@@ -210,7 +201,7 @@ public class CandidateScrollView extends View implements Observer{
      * 直接增量吧
      */
     private void updateTheCandidateRect() {
-        log("before rects.size : " + mCandidateRects.size() + "  candidates size : " + mDecInfo.mCandidatesList.size());
+        //log("before rects.size : " + mCandidateRects.size() + "  candidates size : " + mDecInfo.mCandidatesList.size());
         int curSize = mCandidateRects.size();
         if (curSize > mDecInfo.mCandidatesList.size()) { //说明奇怪的问题发生导致错误
             MYLOG.LOGW("cursize > canlist, reset all");
@@ -218,30 +209,30 @@ public class CandidateScrollView extends View implements Observer{
             mCandidateRects.clear();
         }
         float xPos = 0;
-        float yPos = (getMeasuredHeight() - (mFmiCandidates.bottom - mFmiCandidates.top)) / 2 - mFmiCandidates.top;
         RectF firstRectF = mCandidateRects.size() > 0 ? mCandidateRects.get(mCandidateRects.size() - 1) : null;
         xPos = firstRectF == null ? mPaddingLeft : firstRectF.right;
-        float theItemWidth = 0;
 
+        float theItemWidth = 0;
         List<String> cands = mDecInfo.mCandidatesList;
         for (int i = curSize; i < cands.size(); i++) {
             String theText = cands.get(i);
-            theItemWidth = 2 * mCandidateMargin + mCandidatesPaint.measureText(theText);
-            RectF rectF = new RectF(xPos, yPos + mFmiCandidates.top, xPos + theItemWidth, yPos + mFmiCandidates.bottom);
+            float textWidth = mCandidatesPaint.measureText(theText);
+            theItemWidth = 2 * mCandidateMargin + textWidth;
+            //log("itemwidth : " + theItemWidth + "  the margin : " + mCandidateMargin);
+            RectF rectF = new RectF(xPos, 0 /*+ mFmiCandidates.top*/, xPos + theItemWidth, getMeasuredHeight());
             mCandidateRects.add(rectF);
             xPos += theItemWidth;
         }
-        log("after rects.size : " + mCandidateRects.size() + "  candidates size : " + cands.size());
+        //log("after rects.size : " + mCandidateRects.size() + "  candidates size : " + cands.size());
 
     }
 
     /***
      * 先无论如何都画
-     * 之后依旧是优化做缓存
+     * todo 之后依旧是优化做缓存<-这个还很有难度的
      * @param canvas
      */
     private void drawTheCandidates(Canvas canvas) {
-//        if (!isReDrawCandidate) return;
         if (null == mCandidateRects || mCandidateRects.size() == 0) return;
         float yPos = (getMeasuredHeight() - (mFmiCandidates.bottom - mFmiCandidates.top)) / 2 - mFmiCandidates.top;
         for (int i = 0; i < mCandidateRects.size(); i++) {
@@ -262,7 +253,7 @@ public class CandidateScrollView extends View implements Observer{
                 canvas.drawText(mDecInfo.mCandidatesList.get(i), (int)xPos, (int)yPos, mCandidatesPaint);
             }
         }
-//        isReDrawCandidate = false;
+        checkTheArrowState();
     }
 
     /***
@@ -276,7 +267,7 @@ public class CandidateScrollView extends View implements Observer{
         float measureText = mCandidatesPaint.measureText(s);
         float textSize = mCandidatesPaint.getTextSize();
         float oriSize = textSize;
-//        log("draw suitable size before : " + textSize);
+        //log("draw suitable size before : " + textSize);
         while (measureText > mContentWidth) {
             textSize--;
             mCandidatesPaint.setTextSize(textSize);
@@ -285,7 +276,7 @@ public class CandidateScrollView extends View implements Observer{
         float minSize = sMinCandidatesSize * Constants.getDensity(getContext());
         textSize = textSize > minSize ? textSize : minSize;
         mCandidatesPaint.setTextSize(textSize);
-//        log("draw suitable size after : " + textSize + " min is " + minSize);
+        //log("draw suitable size after : " + textSize + " min is " + minSize);
         canvas.drawText(s, x, y, mCandidatesPaint);
         mCandidatesPaint.setTextSize(oriSize);//恢复现场
     }
@@ -300,18 +291,30 @@ public class CandidateScrollView extends View implements Observer{
         return super.onTouchEvent(event);
     }
 
+    //// TODO: 16年3月9日 然后要做的就是滑动限制 和 滑动过一半自动加载
     public boolean onTouchEventReal(MotionEvent event) {
+
         if (null == mDecInfo.mCandidatesList || 0 == mDecInfo.mCandidatesList.size()) {
             resetAll();
-            return false;
+            return true;
         }
 
         if (event.getAction() == MotionEvent.ACTION_MOVE) {
             float x = event.getX();
             int dx = (int) (mOriX - x);
             if (Math.abs(dx) < 10) {//忽略细小的移动
-//                mIsSliding = false;
                 return true;
+            }
+            /**下面是边界限制如果滑到了边界的话就不允许再滑*/
+            if (mTotalMoveX <= 0 && dx < 0) {
+                mIsSliding = true;//手指还在滑
+                return true;//说明是开头了不准再左滑
+            }
+            if (mTotalMoveX + mContentWidth
+                    >= mCandidateRects.get(mCandidateRects.size() - 1).right + sBlankInTheEnd //稍微多点用户体验好些
+                    && dx > 0) {
+                mIsSliding = true;
+                return true;//说明是到尾巴了不能再滑
             }
         }
 
@@ -320,12 +323,11 @@ public class CandidateScrollView extends View implements Observer{
                 mOriX = event.getX();
                 mOriY = event.getY();
                 mGlobalItemIndex = mapClickItem(mOriX + mTotalMoveX, mOriY);
-
                 if (mGlobalItemIndex == -1) {
-                    log("global index is -1 ! error");
+                    MYLOG.LOGW("global index is -1 ! error");
                 } else { //normal
-                    Toast.makeText(getContext(), "click " + mDecInfo.mCandidatesList.get(mGlobalItemIndex), Toast.LENGTH_SHORT).show();
                 }
+                invalidate();
                 mIsSliding = false;
                 break;
             case MotionEvent.ACTION_MOVE:
@@ -333,28 +335,33 @@ public class CandidateScrollView extends View implements Observer{
                 float y = event.getY();
                 int dx = (int) (mOriX - x);
                 scrollBy(dx, 0);
+                checkCenterIndex();
                 mTotalMoveX += dx;
                 mOriX = x;
                 mOriY = y;
                 mIsSliding = true;
-                log("is sliding");
 //                mGlobalItemIndex = mapClickItem(oriX + mTotalMoveX, oriY);
                 break;
             case MotionEvent.ACTION_UP:
                 if (mIsSliding) {
+                    checkTheArrowState();
                     break;
                 } else {
-                    resetAll();
                     mCvListener.onClickChoice(mGlobalItemIndex);
+                    resetAll();
                     mIsSliding = false;
                 }
-                log("action up oriX ======= : " + mOriX + "the total X :" + mTotalMoveX);
+//                log("action up oriX ======= : " + mOriX + "the total X :" + mTotalMoveX);
                 break;
             case MotionEvent.ACTION_CANCEL:
-                log("action up cancel ======= : " + mOriX + "the total X :" + mTotalMoveX);
+//                log("action up cancel ======= : " + mOriX + "the total X :" + mTotalMoveX);
                 break;
         }
         return true;
+    }
+
+    public void checkTheArrowState() {
+        mArrowUpdater.updateArrowStatus(isCanScrollBackward(), isCanScrollForward());
     }
 
     private int mapClickItem(float x, float y) {
@@ -381,37 +388,105 @@ public class CandidateScrollView extends View implements Observer{
         MYLOG.LOGI(str);
     }
 
-    public void enableActiveHighlight(boolean enableActiveHighlight) {
+//    public void enableActiveHighlight(boolean enableActiveHighlight) {
 //        mEnableActiveHighlight = enableActiveHighlight;
-        invalidate();
-    }
+//        invalidate();
+//    }
 
     public int getGlobalIndex() {
         return mGlobalItemIndex;
     }
 
+    /**
+     * 点击翻页按钮的那种翻页
+     */
+    public void scrollForward() {
+        float willTarget = mTotalMoveX + 2 * mContentWidth;//这个是显示的地方
+        if (mCandidateRects.size() <= 0) return;
+        RectF lastRect = mCandidateRects.get(mCandidateRects.size() - 1);
+        if (willTarget > lastRect.right + sBlankInTheEnd) { //如果强行翻页已经是最后了的话
+            int dx= (int) ((lastRect.right + sBlankInTheEnd) - (mTotalMoveX + mContentWidth));//只能到最后
+            scrollBy(dx, 0);
+            mTotalMoveX += dx;
+        } else {
+            scrollBy(mContentWidth, 0);
+            mTotalMoveX += mContentWidth;//直接翻到下页
+        }
+        checkCenterIndex();
+    }
+
+    /**
+     * 点击向前翻页
+     */
+    public void scrollBackWard() {
+        float willTraget = mTotalMoveX - mContentWidth;
+        if (willTraget > 0) {
+            scrollBy(-mContentWidth, 0);
+            mTotalMoveX -= mContentWidth;
+        } else {
+            mTotalMoveX = 0;
+            scrollTo(0, 0);
+        }
+    }
+
+    /**
+     * 重置所有
+     */
     public void resetAll() {
         log("reset all");
         mGlobalItemIndex = 0;
         mTotalMoveX = 0;
         mActiveCandInPage = 0;
         mCandidateRects.clear();
-        log("the canRect size " + mCandidateRects.size());
+        scrollTo(0, 0);//回到最初
         invalidate();
     }
 
-    public void setIsRedrawKey(boolean isUpdate) {
-
-    }
-
-    //todo 之后会自定义观察者接口
     @Override
     public void update(Observable observable, Object data) {
-        log("update observer");
-        resetAll();
+        boolean restAll = data != null ? (boolean) data : true;
+        if (restAll) {
+            resetAll();
+        } else {
+            invalidate();//仅仅看看数据有没变
+        }
     }
 
-//    public void set(boolean loadMoreFlag) {
-//        this.mLoadMoreFlag = loadMoreFlag;
-//    }
+    /**
+     * 获取屏幕中心的那个候选词的序号
+     * 如果还差指定的(32)个就到头了就加载下一版
+     * @return
+     */
+    private void checkCenterIndex() {
+        if (null == mDecInfo || mCandidateRects.size() <= 0) return;
+
+        float centerX = mTotalMoveX + mContentWidth / 2;
+        int index = mapClickItem(centerX, getHeight() / 2);
+        if (index == -1) {
+            return;
+        }
+        if (index + Constants.LOAD_SEQUENT_SIZE >= mCandidateRects.size()) {
+            mDecInfo.loadMore(false);
+//            log("need load more");
+        }
+    }
+
+    /**
+     *
+     * @return 能否往后一页翻
+     */
+    public boolean isCanScrollForward() {
+        if (null == mCandidateRects || mCandidateRects.size() == 0) return false;
+        return mTotalMoveX + mContentWidth < mCandidateRects.get(mCandidateRects.size() - 1).left;
+    }
+
+    /**
+     * return 能否往前一页翻
+     */
+    public boolean isCanScrollBackward() {
+        return mTotalMoveX > mCandidateMargin;//有一点点的margin
+    }
+
+
+
 }

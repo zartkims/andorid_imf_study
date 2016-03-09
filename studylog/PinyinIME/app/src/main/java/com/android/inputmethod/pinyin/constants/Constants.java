@@ -11,6 +11,10 @@ public class Constants {
     public static final int TOP_PADDING = 2;
     public static final int BOTTOM_PADDING = 2;
     private static float sDensity = 0;
+    /**
+     * 每次从引擎中加载的词数
+     */
+    public static final int LOAD_SEQUENT_SIZE = 32;
     public static float getDensity(Context context) {
         if (sDensity == 0) {
            sDensity = context.getResources().getDisplayMetrics().density;

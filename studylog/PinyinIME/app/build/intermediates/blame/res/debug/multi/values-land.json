@@ -30,14 +30,7 @@
                     "endOffset": 159
                 },
                 "from": {
-                    "file": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/values-land/dimens.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 746,
-                        "endColumn": 48,
-                        "endOffset": 790
-                    }
+                    "file": "/home/caipengli/AndroidStudioProjects/PinyinIME/app/src/main/res/values-land/dimens.xml"
                 }
             }
         ]

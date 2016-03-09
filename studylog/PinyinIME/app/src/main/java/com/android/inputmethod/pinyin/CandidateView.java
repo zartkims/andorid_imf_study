@@ -580,7 +580,7 @@ public class CandidateView extends View {
 
         // Update the arrow status of the container.
         if (null != mArrowUpdater && mUpdateArrowStatusWhenDraw) {
-            mArrowUpdater.updateArrowStatus();
+            mArrowUpdater.updateArrowStatus(false, false);
             mUpdateArrowStatusWhenDraw = false;
         }
     }

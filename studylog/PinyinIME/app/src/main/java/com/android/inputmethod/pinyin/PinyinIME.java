@@ -48,6 +48,9 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
+import com.android.inputmethod.pinyin.constants.Constants;
+import com.android.inputmethod.pinyin.constants.MYLOG;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
@@ -1172,10 +1175,12 @@ public class PinyinIME extends InputMethodService {
     }
 
     private void onChoiceTouched(int activeCandNo) {
+            MYLOG.LOGI("onchoice touched can no is : " + activeCandNo);
         if (mImeState == ImeState.STATE_COMPOSING) {
             changeToStateInput(true);
         } else if (mImeState == ImeState.STATE_INPUT
                 || mImeState == ImeState.STATE_PREDICT) {
+            MYLOG.LOGI("chooseCandidate");
             chooseCandidate(activeCandNo);
         } else if (mImeState == ImeState.STATE_APP_COMPLETION) {
             if (null != mDecInfo.mAppCompletions && activeCandNo >= 0 &&
@@ -1754,11 +1759,11 @@ public class PinyinIME extends InputMethodService {
         public void resetCandidates() {
             mCandidatesList.clear();
             mTotalChoicesNum = 0;
-
             mPageStart.clear();
             mPageStart.add(0);
             mCnToPage.clear();
             mCnToPage.add(0);
+            candidatesChange();
         }
 
         public boolean candidatesFromApp() {
@@ -1798,6 +1803,7 @@ public class PinyinIME extends InputMethodService {
                             if (mPosDelSpl < 0) {
                                 totalChoicesNum = mIPinyinDecoderService
                                         .imSearch(mPyBuf, length());
+//                                MYLOG.LOGI("imSearch: " + totalChoicesNum);
                             } else {
                                 boolean clear_fixed_this_step = true;
                                 if (ImeState.STATE_COMPOSING == mImeState) {
@@ -1807,11 +1813,13 @@ public class PinyinIME extends InputMethodService {
                                         .imDelSearch(mPosDelSpl, mIsPosInSpl,
                                                 clear_fixed_this_step);
                                 mPosDelSpl = -1;
+//                                MYLOG.LOGI("imDelSearch: " + totalChoicesNum);
                             }
                         }
                     } else {
                         totalChoicesNum = mIPinyinDecoderService
                                 .imChoose(candId);
+//                        MYLOG.LOGI("imChoose : " + totalChoicesNum + " candId " + candId);
                     }
                 } catch (RemoteException e) {
                 }
@@ -1900,7 +1908,6 @@ public class PinyinIME extends InputMethodService {
 
             mCandidatesList.add(tmp);
             mTotalChoicesNum = 1;
-
             mSurface.replace(0, mSurface.length(), "");
             mCursorPos = 0;
             mFullSent = tmp;
@@ -1909,6 +1916,7 @@ public class PinyinIME extends InputMethodService {
             mActiveCmpsLen = mFixedLen;
 
             mFinishSelection = true;
+            candidatesChange();
         }
 
         public String getCandidate(int candId) {
@@ -1920,18 +1928,24 @@ public class PinyinIME extends InputMethodService {
             return mCandidatesList.get(candId);
         }
 
-        //cpl
-        public void loadMore(int num) {
-            getCandiagtesForCache();
+        //// TODO: 16年3月9日 这个函数还应该肩负起判断是否有后续的判断　以此来优化
+        public void loadMore(boolean isResetCandidateViewAll) {
+            getCandiadtesForCache(isResetCandidateViewAll);
         }
 
-        private void getCandiagtesForCache() {
+        private void getCandiadtesForCache() {
+            getCandiadtesForCache(true);
+        }
+
+        /***
+         * 是否完全重置 CandidateScrollView
+         * @param isResetCandidateViewAll
+         */
+        private void getCandiadtesForCache(boolean isResetCandidateViewAll) {
             int fetchStart = mCandidatesList.size();
-            int fetchSize = mTotalChoicesNum - fetchStart;
-            if (fetchSize > MAX_PAGE_SIZE_DISPLAY) {
-                fetchSize = MAX_PAGE_SIZE_DISPLAY;
-            }
-            fetchSize = 32;
+            int fetchSize = Constants.LOAD_SEQUENT_SIZE;
+            int residualSize = mTotalChoicesNum - fetchStart;//剩余的词语数
+            fetchSize = fetchSize < residualSize ? fetchSize : residualSize;
             try {
                 List<String> newList = null;
                 if (ImeState.STATE_INPUT == mImeState ||
@@ -1955,8 +1969,7 @@ public class PinyinIME extends InputMethodService {
                     }
                 }
                 mCandidatesList.addAll(newList);
-                setChanged();
-                notifyObservers();
+                candidatesChange(isResetCandidateViewAll);
                 for (String s : mCandidatesList) {
                     Log.i("cpl","-----" + s + "-----");
                 }
@@ -1998,7 +2011,7 @@ public class PinyinIME extends InputMethodService {
             }
 
             // Try to get more items from engine
-            getCandiagtesForCache();
+            getCandiadtesForCache();
 
             // Try to find if there are available new items to display.
             // If no new item, return false;
@@ -2022,6 +2035,7 @@ public class PinyinIME extends InputMethodService {
                     try {
                         mTotalChoicesNum = mIPinyinDecoderService
                                 .imGetPredictsNum(preEdit);
+//                        MYLOG.LOGI("mTotalChoicesNum : " + mTotalChoicesNum + " preEdit :" + preEdit);
                     } catch (RemoteException e) {
                         return;
                     }
@@ -2036,6 +2050,7 @@ public class PinyinIME extends InputMethodService {
             resetCandidates();
             mAppCompletions = completions;
             mTotalChoicesNum = completions.length;
+//            MYLOG.LOGI("mTotalChoicesNum : " + mTotalChoicesNum + " completions.length :" + completions.length);
             preparePage(0);
             mFinishSelection = false;
             return;
@@ -2151,6 +2166,19 @@ public class PinyinIME extends InputMethodService {
 
         public int getFixedLen() {
             return mFixedLen;
+        }
+
+        public void candidatesChange() {
+            candidatesChange(true);
+        }
+
+        /**
+         *
+         * @param isResetCandidateViewAll 如果true将会重置所有包括ＵＩ和数据　如果false仅仅重置数据ＵＩ不会被刷新
+         */
+        public void candidatesChange(boolean isResetCandidateViewAll) {
+            setChanged();
+            notifyObservers(isResetCandidateViewAll);
         }
     }
 }

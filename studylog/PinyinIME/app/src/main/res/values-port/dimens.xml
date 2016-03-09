@@ -14,6 +14,6 @@
      limitations under the License.
 -->
 <resources>
-    <dimen name="candidate_margin_left_right">3dip</dimen>
+    <dimen name="candidate_margin_left_right">8dip</dimen>
     <dimen name="composing_height">18dip</dimen>
 </resources>

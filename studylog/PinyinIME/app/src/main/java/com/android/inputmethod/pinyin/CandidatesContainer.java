@@ -17,6 +17,7 @@
 package com.android.inputmethod.pinyin;
 
 import com.android.inputmethod.pinyin.PinyinIME.DecodingInfo;
+import com.android.inputmethod.pinyin.constants.MYLOG;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -33,7 +34,11 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
 interface ArrowUpdater {
-    void updateArrowStatus();
+    /**
+     * @param left　能否左滑
+     * @param right　能否右滑
+     */
+    void updateArrowStatus(boolean left, boolean right);
 }
 
 
@@ -47,7 +52,7 @@ interface ArrowUpdater {
  * </p>
  */
 public class CandidatesContainer extends RelativeLayout implements
-        OnTouchListener, AnimationListener, ArrowUpdater {
+        OnTouchListener, ArrowUpdater {
     /**
      * Alpha value to show an enabled arrow.
      */
@@ -84,79 +89,11 @@ public class CandidatesContainer extends RelativeLayout implements
      */
     private DecodingInfo mDecInfo;
 
-    /**
-     * The animation view used to show candidates. It contains two views.
-     * Normally, the candidates are shown one of them. When user navigates to
-     * another page, animation effect will be performed.
-     */
-//    private ViewFlipper mFlipper;
      private CandidateScrollView mCandidateView;
     /**
      * The x offset of the flipper in this container.
      */
     private int xOffsetForFlipper;
-
-    /**
-     * Animation used by the incoming view when the user navigates to a left
-     * page.
-     */
-    private Animation mInAnimPushLeft;
-
-    /**
-     * Animation used by the incoming view when the user navigates to a right
-     * page.
-     */
-    private Animation mInAnimPushRight;
-
-    /**
-     * Animation used by the incoming view when the user navigates to a page
-     * above. If the page navigation is triggered by DOWN key, this animation is
-     * used.
-     */
-    private Animation mInAnimPushUp;
-
-    /**
-     * Animation used by the incoming view when the user navigates to a page
-     * below. If the page navigation is triggered by UP key, this animation is
-     * used.
-     */
-    private Animation mInAnimPushDown;
-
-    /**
-     * Animation used by the outgoing view when the user navigates to a left
-     * page.
-     */
-    private Animation mOutAnimPushLeft;
-
-    /**
-     * Animation used by the outgoing view when the user navigates to a right
-     * page.
-     */
-    private Animation mOutAnimPushRight;
-
-    /**
-     * Animation used by the outgoing view when the user navigates to a page
-     * above. If the page navigation is triggered by DOWN key, this animation is
-     * used.
-     */
-    private Animation mOutAnimPushUp;
-
-    /**
-     * Animation used by the incoming view when the user navigates to a page
-     * below. If the page navigation is triggered by UP key, this animation is
-     * used.
-     */
-    private Animation mOutAnimPushDown;
-
-    /**
-     * Animation object which is used for the incoming view currently.
-     */
-    private Animation mInAnimInUse;
-
-    /**
-     * Animation object which is used for the outgoing view currently.
-     */
-    private Animation mOutAnimInUse;
 
     /**
      * Current page number in display.
@@ -177,17 +114,9 @@ public class CandidatesContainer extends RelativeLayout implements
         mRightArrowBtn.setOnTouchListener(this);
 
         mCandidateView = (CandidateScrollView) findViewById(R.id.my_scroll_candidate);
-//        cpl
-//        mFlipper = (ViewFlipper) findViewById(R.id.candidate_flipper);
-//        mFlipper.setMeasureAllChildren(true);
 
         invalidate();
         requestLayout();
-//cpl
-//        for (int i = 0; i < mFlipper.getChildCount(); i++) {
-//            CandidateView cv = (CandidateView) mFlipper.getChildAt(i);
-//            cv.initialize(this, balloonHint, gestureDetector, mCvListener);
-//        }
         mCandidateView.initialize(this, mCvListener);
     }
 
@@ -204,19 +133,8 @@ public class CandidatesContainer extends RelativeLayout implements
             showArrow(mLeftArrowBtn, true);
             showArrow(mRightArrowBtn, true);
         }
-//cpl
-//        for (int i = 0; i < mFlipper.getChildCount(); i++) {
-//            CandidateView cv = (CandidateView) mFlipper.getChildAt(i);
-//            cv.setDecodingInfo(mDecInfo);
-//        }
         mCandidateView.setDecodingInfo(mDecInfo);
-        stopAnimation();
-
-//        cpl
-//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-//        cv.showPage(mCurrentPage, 0, enableActiveHighlight);
-
-        updateArrowStatus();
+//        updateArrowStatus(false, false);
         invalidate();
     }
 
@@ -225,10 +143,7 @@ public class CandidatesContainer extends RelativeLayout implements
     }
 
     public void enableActiveHighlight(boolean enableActiveHighlight) {
-//        cpl
-//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-//        cv.enableActiveHighlight(enableActiveHighlight);
-        mCandidateView.enableActiveHighlight(enableActiveHighlight);
+//        mCandidateView.enableActiveHighlight(enableActiveHighlight);
         invalidate();
     }
 
@@ -280,86 +195,48 @@ public class CandidatesContainer extends RelativeLayout implements
 //        } else {
 //            return pageForward(true, true);
 //        }
+
         return true;
     }
 
     public boolean pageBackward(boolean animLeftRight,
             boolean enableActiveHighlight) {
-//        cpl
-//        if (null == mDecInfo) return false;
-//
-//        if (mFlipper.isFlipping() || 0 == mCurrentPage) return false;
-//
-//        int child = mFlipper.getDisplayedChild();
-//        int childNext = (child + 1) % 2;
-//        CandidateView cv = (CandidateView) mFlipper.getChildAt(child);
-//        CandidateView cvNext = (CandidateView) mFlipper.getChildAt(childNext);
-//
-//        mCurrentPage--;
-//        int activeCandInPage = cv.getActiveCandiatePosInPage();
-//        if (animLeftRight) {
-//            activeCandInPage = mDecInfo.mPageStart.elementAt(mCurrentPage + 1)
-//                    - mDecInfo.mPageStart.elementAt(mCurrentPage) - 1;
-//        }
-//
-//        cvNext.showPage(mCurrentPage, activeCandInPage, enableActiveHighlight);
-//        loadAnimation(animLeftRight, false);
-//        startAnimation();
-//
-//        updateArrowStatus();
+        if (null == mDecInfo) return false;
+        mCandidateView.scrollBackWard();
         return true;
     }
 
     public boolean pageForward(boolean animLeftRight,
             boolean enableActiveHighlight) {
         if (null == mDecInfo) return false;
-//        cpl
-//        if (mFlipper.isFlipping() || !mDecInfo.preparePage(mCurrentPage + 1)) {
-//            return false;
-//        }
-//
-//        int child = mFlipper.getDisplayedChild();
-//        int childNext = (child + 1) % 2;
-//        CandidateView cv = (CandidateView) mFlipper.getChildAt(child);
-//        int activeCandInPage = cv.getActiveCandiatePosInPage();
-//        cv.enableActiveHighlight(enableActiveHighlight);
-//
-//        CandidateView cvNext = (CandidateView) mFlipper.getChildAt(childNext);
-//        mCurrentPage++;
-//        if (animLeftRight) activeCandInPage = 0;
-//
-//        cvNext.showPage(mCurrentPage, activeCandInPage, enableActiveHighlight);
-//        loadAnimation(animLeftRight, true);
-//        startAnimation();
-//
-//        updateArrowStatus();
-        mDecInfo.loadMore(32);
+        MYLOG.LOGI("forward");
+        mCandidateView.scrollForward();
         return true;
     }
 
     public int getActiveCandiatePos() {
         if (null == mDecInfo) return -1;
-//        cpl
-//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-//        return cv.getActiveCandiatePosGlobal();
         return mCandidateView.getGlobalIndex();
     }
 
-    public void updateArrowStatus() {
+    public void updateArrowStatus(boolean left, boolean right) {
         if (mCurrentPage < 0) return;
-        boolean forwardEnabled = mDecInfo.pageForwardable(mCurrentPage);
-        boolean backwardEnabled = mDecInfo.pageBackwardable(mCurrentPage);
+//        boolean forwardEnabled = true;//cpl//
+//         mDecInfo.pageForwardable(mCurrentPage);
+//        boolean backwardEnabled = true;//cpl//mDecInfo.pageBackwardable(mCurrentPage);
+//        if (backwardEnabled) {
+//            enableArrow(mLeftArrowBtn, true);
+//        } else {
+//            enableArrow(mLeftArrowBtn, false);
+//        }
+//        if (forwardEnabled) {
+//            enableArrow(mRightArrowBtn, true);
+//        } else {
+//            enableArrow(mRightArrowBtn, false);
+//        }
+        enableArrow(mLeftArrowBtn, left);
+        enableArrow(mRightArrowBtn, right);
 
-        if (backwardEnabled) {
-            enableArrow(mLeftArrowBtn, true);
-        } else {
-            enableArrow(mLeftArrowBtn, false);
-        }
-        if (forwardEnabled) {
-            enableArrow(mRightArrowBtn, true);
-        } else {
-            enableArrow(mRightArrowBtn, false);
-        }
     }
 
     private void enableArrow(ImageButton arrowBtn, boolean enabled) {
@@ -388,7 +265,7 @@ public class CandidatesContainer extends RelativeLayout implements
 //            cpl
 //            CandidateView cv = (CandidateView) mFlipper.getCurrentView();
 //            cv.enableActiveHighlight(true);
-              mCandidateView.enableActiveHighlight(true);
+//              mCandidateView.enableActiveHighlight(true);
 
         }
 
@@ -401,94 +278,9 @@ public class CandidatesContainer extends RelativeLayout implements
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         event.offsetLocation(-xOffsetForFlipper, 0);
-//        cpl
-//        CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-//        cv.onTouchEventReal(event);
         mCandidateView.onTouchEventReal(event);
         return true;
     }
 
-    public void loadAnimation(boolean animLeftRight, boolean forward) {
-        if (animLeftRight) {
-            if (forward) {
-                if (null == mInAnimPushLeft) {
-                    mInAnimPushLeft = createAnimation(1.0f, 0, 0, 0, 0, 1.0f,
-                            ANIMATION_TIME);
-                    mOutAnimPushLeft = createAnimation(0, -1.0f, 0, 0, 1.0f, 0,
-                            ANIMATION_TIME);
-                }
-                mInAnimInUse = mInAnimPushLeft;
-                mOutAnimInUse = mOutAnimPushLeft;
-            } else {
-                if (null == mInAnimPushRight) {
-                    mInAnimPushRight = createAnimation(-1.0f, 0, 0, 0, 0, 1.0f,
-                            ANIMATION_TIME);
-                    mOutAnimPushRight = createAnimation(0, 1.0f, 0, 0, 1.0f, 0,
-                            ANIMATION_TIME);
-                }
-                mInAnimInUse = mInAnimPushRight;
-                mOutAnimInUse = mOutAnimPushRight;
-            }
-        } else {
-            if (forward) {
-                if (null == mInAnimPushUp) {
-                    mInAnimPushUp = createAnimation(0, 0, 1.0f, 0, 0, 1.0f,
-                            ANIMATION_TIME);
-                    mOutAnimPushUp = createAnimation(0, 0, 0, -1.0f, 1.0f, 0,
-                            ANIMATION_TIME);
-                }
-                mInAnimInUse = mInAnimPushUp;
-                mOutAnimInUse = mOutAnimPushUp;
-            } else {
-                if (null == mInAnimPushDown) {
-                    mInAnimPushDown = createAnimation(0, 0, -1.0f, 0, 0, 1.0f,
-                            ANIMATION_TIME);
-                    mOutAnimPushDown = createAnimation(0, 0, 0, 1.0f, 1.0f, 0,
-                            ANIMATION_TIME);
-                }
-                mInAnimInUse = mInAnimPushDown;
-                mOutAnimInUse = mOutAnimPushDown;
-            }
-        }
 
-        mInAnimInUse.setAnimationListener(this);
-//cpl
-//        mFlipper.setInAnimation(mInAnimInUse);
-//        mFlipper.setOutAnimation(mOutAnimInUse);
-    }
-
-    private Animation createAnimation(float xFrom, float xTo, float yFrom,
-            float yTo, float alphaFrom, float alphaTo, long duration) {
-        AnimationSet animSet = new AnimationSet(getContext(), null);
-        Animation trans = new TranslateAnimation(Animation.RELATIVE_TO_SELF,
-                xFrom, Animation.RELATIVE_TO_SELF, xTo,
-                Animation.RELATIVE_TO_SELF, yFrom, Animation.RELATIVE_TO_SELF,
-                yTo);
-        Animation alpha = new AlphaAnimation(alphaFrom, alphaTo);
-        animSet.addAnimation(trans);
-        animSet.addAnimation(alpha);
-        animSet.setDuration(duration);
-        return animSet;
-    }
-
-    private void startAnimation() {
-//        mFlipper.showNext();
-    }
-
-    private void stopAnimation() {
-//        mFlipper.stopFlipping();
-    }
-
-    public void onAnimationEnd(Animation animation) {
-        if (!mLeftArrowBtn.isPressed() && !mRightArrowBtn.isPressed()) {
-//            CandidateView cv = (CandidateView) mFlipper.getCurrentView();
-//            cv.enableActiveHighlight(true);
-        }
-    }
-
-    public void onAnimationRepeat(Animation animation) {
-    }
-
-    public void onAnimationStart(Animation animation) {
-    }
 }
