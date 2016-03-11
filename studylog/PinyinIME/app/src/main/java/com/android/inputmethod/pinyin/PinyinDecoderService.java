@@ -99,7 +99,7 @@ public class PinyinDecoderService extends Service {
     private final static int MAX_PATH_FILE_LENGTH = 100;
     private static boolean inited = false;
 
-    private String mUsr_dict_file;
+    private String  mUsr_dict_file;
 
     static {
         try {

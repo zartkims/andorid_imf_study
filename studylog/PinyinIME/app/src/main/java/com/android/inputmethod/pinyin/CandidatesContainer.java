@@ -104,8 +104,7 @@ public class CandidatesContainer extends RelativeLayout implements
         super(context, attrs);
     }
 
-    public void initialize(CandidateViewListener cvListener,
-            BalloonHint balloonHint, GestureDetector gestureDetector) {
+    public void initialize(CandidateViewListener cvListener) {
         mCvListener = cvListener;
 
         mLeftArrowBtn = (ImageButton) findViewById(R.id.arrow_left_btn);

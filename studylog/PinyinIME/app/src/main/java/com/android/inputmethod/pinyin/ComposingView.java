@@ -119,7 +119,7 @@ public class ComposingView extends View {
         super(context, attrs);
 
         Resources r = context.getResources();
-        mHlDrawable = r.getDrawable(R.drawable.composing_hl_bg);
+        mHlDrawable = r.getDrawable(R.drawable.bg_composing_word);
         mCursor = r.getDrawable(R.drawable.composing_area_cursor);
 
         mStrColor = r.getColor(R.color.composing_color);
@@ -255,9 +255,9 @@ public class ComposingView extends View {
 
         int cursorPos = mDecInfo.getCursorPosInCmpsDisplay();
         int cmpsPos = cursorPos;
-        String cmpsStr = mDecInfo.getComposingStrForDisplay();
         int activeCmpsLen = mDecInfo.getActiveCmpsDisplayLen();
         if (cursorPos > activeCmpsLen) cmpsPos = activeCmpsLen;
+        String cmpsStr = mDecInfo.getComposingStrForDisplay();
         canvas.drawText(cmpsStr, 0, cmpsPos, x, y, mPaint);
         x += mPaint.measureText(cmpsStr, 0, cmpsPos);
         if (cursorPos <= activeCmpsLen) {

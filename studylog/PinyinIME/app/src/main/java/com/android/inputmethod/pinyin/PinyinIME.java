@@ -115,7 +115,7 @@ public class PinyinIME extends InputMethodService {
     /**
      * Balloon used when user presses a candidate.
      */
-    private BalloonHint mCandidatesBalloon;
+//    private BalloonHint mCandidatesBalloon;
 
     /**
      * Used to notify the input method when the user touch a candidate.
@@ -125,22 +125,22 @@ public class PinyinIME extends InputMethodService {
     /**
      * Used to notify gestures from soft keyboard.
      */
-    private OnGestureListener mGestureListenerSkb;
+//    private OnGestureListener mGestureListenerSkb;
 
     /**
      * Used to notify gestures from candidates view.
      */
-    private OnGestureListener mGestureListenerCandidates;
+//    private OnGestureListener mGestureListenerCandidates;
 
     /**
      * The on-screen movement gesture detector for soft keyboard.
      */
-    private GestureDetector mGestureDetectorSkb;
+//    private GestureDetector mGestureDetectorSkb;
 
     /**
      * The on-screen movement gesture detector for candidates view.
      */
-    private GestureDetector mGestureDetectorCandidates;
+//    private GestureDetector mGestureDetectorCandidates;
 
     /**
      * Option dialog to choose settings and other IMEs.
@@ -193,11 +193,11 @@ public class PinyinIME extends InputMethodService {
 
         mInputModeSwitcher = new InputModeSwitcher(this);
         mChoiceNotifier = new ChoiceNotifier(this);
-        mGestureListenerSkb = new OnGestureListener(false);
-        mGestureListenerCandidates = new OnGestureListener(true);
-        mGestureDetectorSkb = new GestureDetector(this, mGestureListenerSkb);
-        mGestureDetectorCandidates = new GestureDetector(this,
-                mGestureListenerCandidates);
+//        mGestureListenerSkb = new OnGestureListener(false);
+//        mGestureListenerCandidates = new OnGestureListener(true);
+//        mGestureDetectorSkb = new GestureDetector(this, mGestureListenerSkb);
+//        mGestureDetectorCandidates = new GestureDetector(this,
+//                mGestureListenerCandidates);
 
         mEnvironment.onConfigurationChanged(getResources().getConfiguration(),
                 this);
@@ -231,9 +231,9 @@ public class PinyinIME extends InputMethodService {
         if (null != mSkbContainer) {
             mSkbContainer.dismissPopups();
         }
-        if (null != mCandidatesBalloon) {
-            mCandidatesBalloon.dismiss();
-        }
+//        if (null != mCandidatesBalloon) {
+//            mCandidatesBalloon.dismiss();
+//        }//cpl
         super.onConfigurationChanged(newConfig);
         resetToIdleState(false);
     }
@@ -943,12 +943,13 @@ public class PinyinIME extends InputMethodService {
                 R.layout.candidates_container, null);
 
         // Create balloon hint for candidates view.
-        mCandidatesBalloon = new BalloonHint(this, mCandidatesContainer,
-                MeasureSpec.UNSPECIFIED);
-        mCandidatesBalloon.setBalloonBackground(getResources().getDrawable(
-                R.drawable.candidate_balloon_bg));
-        mCandidatesContainer.initialize(mChoiceNotifier, mCandidatesBalloon,
-                mGestureDetectorCandidates);
+//        mCandidatesBalloon = new BalloonHint(this, mCandidatesContainer,
+//                MeasureSpec.UNSPECIFIED);
+//        mCandidatesBalloon.setBalloonBackground(getResources().getDrawable(
+//                R.drawable.candidate_balloon_bg));//cpl
+
+        mCandidatesContainer.initialize(mChoiceNotifier/*, mCandidatesBalloon,
+                mGestureDetectorCandidates*/);
 
         // The floating window
         if (null != mFloatingWindow && mFloatingWindow.isShowing()) {
@@ -1105,7 +1106,6 @@ public class PinyinIME extends InputMethodService {
                 null);
         mSkbContainer.setService(this);
         mSkbContainer.setInputModeSwitcher(mInputModeSwitcher);
-        mSkbContainer.setGestureDetector(mGestureDetectorSkb);
         return mSkbContainer;
     }
 
@@ -1327,172 +1327,137 @@ public class PinyinIME extends InputMethodService {
         }
     }
 
-    public class OnGestureListener extends
-            GestureDetector.SimpleOnGestureListener {
-        /**
-         * When user presses and drags, the minimum x-distance to make a
-         * response to the drag event.
-         */
-        private static final int MIN_X_FOR_DRAG = 60;
-
-        /**
-         * When user presses and drags, the minimum y-distance to make a
-         * response to the drag event.
-         */
-        private static final int MIN_Y_FOR_DRAG = 40;
-
-        /**
-         * Velocity threshold for a screen-move gesture. If the minimum
-         * x-velocity is less than it, no gesture.
-         */
-        static private final float VELOCITY_THRESHOLD_X1 = 0.3f;
-
-        /**
-         * Velocity threshold for a screen-move gesture. If the maximum
-         * x-velocity is less than it, no gesture.
-         */
-        static private final float VELOCITY_THRESHOLD_X2 = 0.7f;
-
-        /**
-         * Velocity threshold for a screen-move gesture. If the minimum
-         * y-velocity is less than it, no gesture.
-         */
-        static private final float VELOCITY_THRESHOLD_Y1 = 0.2f;
-
-        /**
-         * Velocity threshold for a screen-move gesture. If the maximum
-         * y-velocity is less than it, no gesture.
-         */
-        static private final float VELOCITY_THRESHOLD_Y2 = 0.45f;
-
-        /** If it false, we will not response detected gestures. */
-        private boolean mReponseGestures;
-
-        /** The minimum X velocity observed in the gesture. */
-        private float mMinVelocityX = Float.MAX_VALUE;
-
-        /** The minimum Y velocity observed in the gesture. */
-        private float mMinVelocityY = Float.MAX_VALUE;
-
-        /** The first down time for the series of touch events for an action. */
-        private long mTimeDown;
-
-        /** The last time when onScroll() is called. */
-        private long mTimeLastOnScroll;
-
-        /** This flag used to indicate that this gesture is not a gesture. */
-        private boolean mNotGesture;
-
-        /** This flag used to indicate that this gesture has been recognized. */
-        private boolean mGestureRecognized;
-
-        public OnGestureListener(boolean reponseGestures) {
-            mReponseGestures = reponseGestures;
-        }
-
-        @Override
-        public boolean onDown(MotionEvent e) {
-            mMinVelocityX = Integer.MAX_VALUE;
-            mMinVelocityY = Integer.MAX_VALUE;
-            mTimeDown = e.getEventTime();
-            mTimeLastOnScroll = mTimeDown;
-            mNotGesture = false;
-            mGestureRecognized = false;
-            return false;
-        }
-
-        @Override
-        public boolean onScroll(MotionEvent e1, MotionEvent e2,
-                float distanceX, float distanceY) {
-            if (mNotGesture) return false;
-            if (mGestureRecognized) return true;
-
-            if (Math.abs(e1.getX() - e2.getX()) < MIN_X_FOR_DRAG
-                    && Math.abs(e1.getY() - e2.getY()) < MIN_Y_FOR_DRAG)
-                return false;
-
-            long timeNow = e2.getEventTime();
-            long spanTotal = timeNow - mTimeDown;
-            long spanThis = timeNow - mTimeLastOnScroll;
-            if (0 == spanTotal) spanTotal = 1;
-            if (0 == spanThis) spanThis = 1;
-
-            float vXTotal = (e2.getX() - e1.getX()) / spanTotal;
-            float vYTotal = (e2.getY() - e1.getY()) / spanTotal;
-
-            // The distances are from the current point to the previous one.
-            float vXThis = -distanceX / spanThis;
-            float vYThis = -distanceY / spanThis;
-
-            float kX = vXTotal * vXThis;
-            float kY = vYTotal * vYThis;
-            float k1 = kX + kY;
-            float k2 = Math.abs(kX) + Math.abs(kY);
-
-            if (k1 / k2 < 0.8) {
-                mNotGesture = true;
-                return false;
-            }
-            float absVXTotal = Math.abs(vXTotal);
-            float absVYTotal = Math.abs(vYTotal);
-            if (absVXTotal < mMinVelocityX) {
-                mMinVelocityX = absVXTotal;
-            }
-            if (absVYTotal < mMinVelocityY) {
-                mMinVelocityY = absVYTotal;
-            }
-
-            if (mMinVelocityX < VELOCITY_THRESHOLD_X1
-                    && mMinVelocityY < VELOCITY_THRESHOLD_Y1) {
-                mNotGesture = true;
-                return false;
-            }
-
-            if (vXTotal > VELOCITY_THRESHOLD_X2
-                    && absVYTotal < VELOCITY_THRESHOLD_Y2) {
-                if (mReponseGestures) onDirectionGesture(Gravity.RIGHT);
-                mGestureRecognized = true;
-            } else if (vXTotal < -VELOCITY_THRESHOLD_X2
-                    && absVYTotal < VELOCITY_THRESHOLD_Y2) {
-                if (mReponseGestures) onDirectionGesture(Gravity.LEFT);
-                mGestureRecognized = true;
-            } else if (vYTotal > VELOCITY_THRESHOLD_Y2
-                    && absVXTotal < VELOCITY_THRESHOLD_X2) {
-                if (mReponseGestures) onDirectionGesture(Gravity.BOTTOM);
-                mGestureRecognized = true;
-            } else if (vYTotal < -VELOCITY_THRESHOLD_Y2
-                    && absVXTotal < VELOCITY_THRESHOLD_X2) {
-                if (mReponseGestures) onDirectionGesture(Gravity.TOP);
-                mGestureRecognized = true;
-            }
-
-            mTimeLastOnScroll = timeNow;
-            return mGestureRecognized;
-        }
-
-        @Override
-        public boolean onFling(MotionEvent me1, MotionEvent me2,
-                float velocityX, float velocityY) {
-            return mGestureRecognized;
-        }
-
-        public void onDirectionGesture(int gravity) {
-            if (Gravity.NO_GRAVITY == gravity) {
-                return;
-            }
-
-            if (Gravity.LEFT == gravity || Gravity.RIGHT == gravity) {
-                if (mCandidatesContainer.isShown()) {
-                    if (Gravity.LEFT == gravity) {
-                        mCandidatesContainer.pageForward(true, true);
-                    } else {
-                        mCandidatesContainer.pageBackward(true, true);
-                    }
-                    return;
-                }
-            }
-        }
-    }
+//    public class OnGestureListener extends
+//            GestureDetector.SimpleOnGestureListener {
+//        /**
+//         * When user presses and drags, the minimum x-distance to make a
+//         * response to the drag event.
+//         */
+//        private static final int MIN_X_FOR_DRAG = 60;
+//
+//        /**
+//         * When user presses and drags, the minimum y-distance to make a
+//         * response to the drag event.
+//         */
+//        private static final int MIN_Y_FOR_DRAG = 40;
+//
+//        /**
+//         * Velocity threshold for a screen-move gesture. If the minimum
+//         * x-velocity is less than it, no gesture.
+//         */
+//        static private final float VELOCITY_THRESHOLD_X1 = 0.3f;
+//
+//        /**
+//         * Velocity threshold for a screen-move gesture. If the maximum
+//         * x-velocity is less than it, no gesture.
+//         */
+//        static private final float VELOCITY_THRESHOLD_X2 = 0.7f;
+//
+//        /**
+//         * Velocity threshold for a screen-move gesture. If the minimum
+//         * y-velocity is less than it, no gesture.
+//         */
+//        static private final float VELOCITY_THRESHOLD_Y1 = 0.2f;
+//
+//        /**
+//         * Velocity threshold for a screen-move gesture. If the maximum
+//         * y-velocity is less than it, no gesture.
+//         */
+//        static private final float VELOCITY_THRESHOLD_Y2 = 0.45f;
+//
+//        /** If it false, we will not response detected gestures. */
+//        private boolean mReponseGestures;
+//
+//        /** The minimum X velocity observed in the gesture. */
+//        private float mMinVelocityX = Float.MAX_VALUE;
+//
+//        /** The minimum Y velocity observed in the gesture. */
+//        private float mMinVelocityY = Float.MAX_VALUE;
+//
+//        /** The first down time for the series of touch events for an action. */
+//        private long mTimeDown;
+//
+//        /** The last time when onScroll() is called. */
+//        private long mTimeLastOnScroll;
+//
+//        /** This flag used to indicate that this gesture is not a gesture. */
+//        private boolean mNotGesture;
+//
+//        /** This flag used to indicate that this gesture has been recognized. */
+//        private boolean mGestureRecognized;
+//
+//        public OnGestureListener(boolean reponseGestures) {
+//            mReponseGestures = reponseGestures;
+//        }
+//
+//        @Override
+//        public boolean onDown(MotionEvent e) {
+//            mMinVelocityX = Integer.MAX_VALUE;
+//            mMinVelocityY = Integer.MAX_VALUE;
+//            mTimeDown = e.getEventTime();
+//            mTimeLastOnScroll = mTimeDown;
+//            mNotGesture = false;
+//            mGestureRecognized = false;
+//            return false;
+//        }
+//
+////        @Override
+////        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+////            if (mNotGesture) return false;
+////            if (mGestureRecognized) return true;
+////            //移动很小没达到下限
+////            if (Math.abs(e1.getX() - e2.getX()) < MIN_X_FOR_DRAG
+////                    && Math.abs(e1.getY() - e2.getY()) < MIN_Y_FOR_DRAG) {
+////                return false;
+////            }
+////            long timeNow = e2.getEventTime();
+////            long spanTotal = timeNow - mTimeDown;
+////            long spanThis = timeNow - mTimeLastOnScroll;
+////
+////            if (0 == spanTotal) spanTotal = 1;
+////            if (0 == spanThis) spanThis = 1;
+////            //总的平均移动速度
+////            float vXTotal = (e2.getX() - e1.getX()) / spanTotal;
+////            float vYTotal = (e2.getY() - e1.getY()) / spanTotal;
+////            //这次的平均速度
+////            float vXThis = -distanceX / spanThis;
+////            float vYThis = -distanceY / spanThis;
+////
+////            //愣是没明白这个数学原理
+////            float kX = vXTotal * vXThis;
+////            float kY = vYTotal * vYThis;
+////            float k1 = kX + kY;
+////            float k2 = Math.abs(kX) + Math.abs(kY);
+////
+////            if (k1 / k2 < 0.8) {
+////                mNotGesture = true;
+////                return false;
+////            }
+////            float absVXTotal = Math.abs(vXTotal);
+////            float absVYTotal = Math.abs(vYTotal);
+////            if (absVXTotal < mMinVelocityX) mMinVelocityX = absVXTotal;
+////            if (absVYTotal < mMinVelocityY) mMinVelocityY = absVYTotal;
+////            if (mMinVelocityX < VELOCITY_THRESHOLD_X1
+////                    && mMinVelocityY < VELOCITY_THRESHOLD_Y1) {
+////                mNotGesture = true;
+////                return false;
+////            }
+////
+////            if (vXTotal > VELOCITY_THRESHOLD_X2 &&
+////                    absVYTotal < mMinVelocityY) {
+////                if (mIsResponseGestures) onDirectionGesture(Gravity.RIGHT);
+////                mGestureRecognized = true;
+////            }
+////        }
+//
+//
+//        @Override
+//        public boolean onFling(MotionEvent me1, MotionEvent me2,
+//                float velocityX, float velocityY) {
+//            return mGestureRecognized;
+//        }
+//
+//    }
 
     /**
      * Connection used for binding to the Pinyin decoding service.
@@ -1516,7 +1481,7 @@ public class PinyinIME extends InputMethodService {
         /**
          * Maximum length of the Pinyin string
          */
-        private static final int PY_STRING_MAX = 28;
+        private static final int PY_STRING_MAX = 80;//cpl//强行换到80
 
         /**
          * Maximum number of candidates to display in one page.
@@ -1561,7 +1526,7 @@ public class PinyinIME extends InputMethodService {
         private int mActiveCmpsDisplayLen;
 
         /**
-         * The first full sentence choice.
+             * The first full sentence choice.
          */
         private String mFullSent;
 
@@ -1838,6 +1803,10 @@ public class PinyinIME extends InputMethodService {
                 String pyStr;
 
                 mSplStart = mIPinyinDecoderService.imGetSplStart();
+                MYLOG.LOGI("mSplStart.length : " + mSplStart.length + "");
+                for (int i = 0; i < mSplStart.length; i++) {
+                    MYLOG.LOGI(" the start " + mSplStart[i]);
+                }
                 pyStr = mIPinyinDecoderService.imGetPyStr(false);
                 mSurfaceDecodedLen = mIPinyinDecoderService.imGetPyStrLen(true);
                 assert (mSurfaceDecodedLen <= pyStr.length());
@@ -1865,9 +1834,11 @@ public class PinyinIME extends InputMethodService {
                     mActiveCmpsDisplayLen = mComposingStr.length();
                 } else {
                     mComposingStrDisplay = mFullSent.substring(0, mFixedLen);
+//                    MYLOG.LOGI("fix string : " + mComposingStr);
                     for (int pos = mFixedLen + 1; pos < mSplStart.length - 1; pos++) {
                         mComposingStrDisplay += mSurface.substring(
                                 mSplStart[pos], mSplStart[pos + 1]);
+//                        MYLOG.LOGI("after add the next : " + mComposingStr);
                         if (mSplStart[pos + 1] < mSurfaceDecodedLen) {
                             mComposingStrDisplay += " ";
                         }
@@ -1879,7 +1850,9 @@ public class PinyinIME extends InputMethodService {
                     }
                 }
 
-                if (mSplStart.length == mFixedLen + 2) {
+
+                if (mSplStart.length == mFixedLen + 2) {//选完后
+                    MYLOG.LOGI("mSplStart.length == mFixedLen + 2");
                     mFinishSelection = true;
                 } else {
                     mFinishSelection = false;
@@ -1892,7 +1865,9 @@ public class PinyinIME extends InputMethodService {
             }
             // Prepare page 0.
             if (!mFinishSelection) {
-                preparePage(0);
+//                preparePage(0);
+                getCandiadtesForCache();
+//                MYLOG.LOGI("prepare page 0");
             }
         }
 
@@ -1917,6 +1892,7 @@ public class PinyinIME extends InputMethodService {
 
             mFinishSelection = true;
             candidatesChange();
+            MYLOG.LOGI("temp : " + tmp);
         }
 
         public String getCandidate(int candId) {

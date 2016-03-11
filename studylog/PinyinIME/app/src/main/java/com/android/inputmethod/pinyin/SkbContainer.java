@@ -200,6 +200,7 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
         mPopupSkb = new PopupWindow(getContext());
         mPopupSkb.setBackgroundDrawable(null);
         mPopupSkb.setClippingEnabled(false);
+        mGestureDetector = new GestureDetector(getContext(),new GestureDetector.SimpleOnGestureListener());
     }
 
     public void setService(InputMethodService service) {
@@ -210,9 +211,6 @@ public class SkbContainer extends RelativeLayout implements OnTouchListener {
         mInputModeSwitcher = inputModeSwitcher;
     }
 
-    public void setGestureDetector(GestureDetector gestureDetector) {
-        mGestureDetector = gestureDetector;
-    }
 
     public boolean isCurrentSkbSticky() {
         if (null == mMajorView) return true;
