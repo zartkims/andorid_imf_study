@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.northeastern_uni.caipengli.cplinput.view.SoftKeyboardContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/skb_container_bg">
+    <ViewFlipper
+        android:id="@+id/alpha_floatable"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_function_candidate">
+
+        <com.northeastern_uni.caipengli.cplinput.view.SoftKeyboardView
+            android:id="@+id/alpha_view1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <com.northeastern_uni.caipengli.cplinput.view.SoftKeyboardView
+            android:id="@+id/alpha_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </ViewFlipper>
+</com.northeastern_uni.caipengli.cplinput.view.SoftKeyboardContainer>

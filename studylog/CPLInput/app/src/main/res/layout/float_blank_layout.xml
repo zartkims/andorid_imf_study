@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--这个仅仅是用来占个位置　作为键盘位置占位-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/float_candidate_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/balloon_color"
+    android:orientation="vertical">
+
+</LinearLayout>

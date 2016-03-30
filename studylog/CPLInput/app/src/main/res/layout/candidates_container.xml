@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.northeastern_uni.caipengli.cplinput.view.CandidatesContainer
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/candidates_container"
+  android:background="@drawable/cands_container_bg"
+  android:orientation="horizontal"
+  android:layout_width="0dip"
+  android:layout_height="0dip">
+
+  <ImageButton android:id="@+id/arrow_left_btn"
+    android:background="@drawable/arrow_bg"
+    android:src="@drawable/arrow_left"
+    android:layout_height="match_parent"
+    android:layout_width="30dip"
+    android:clickable="true"
+    android:layout_alignParentLeft="true"/>
+
+  <ImageButton android:id="@+id/arrow_right_btn"
+    android:background="@drawable/arrow_bg"
+    android:src="@drawable/arrow_right"
+    android:layout_width="30dip"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:layout_alignParentRight="true"/>
+
+    <com.northeastern_uni.caipengli.cplinput.view.CandidateScrollView
+        android:id="@+id/my_scroll_candidate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/arrow_right_btn"
+        android:layout_toRightOf="@id/arrow_left_btn"
+        />
+</com.northeastern_uni.caipengli.cplinput.view.CandidatesContainer>
