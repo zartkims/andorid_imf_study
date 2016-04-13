@@ -1,0 +1,825 @@
+
+
+===================
+cost time : 52 
+D/StrictMode(27658): StrictMode policy violation; ~duration=52 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(27658): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(27658): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(27658): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(27658): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode(27658): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode(27658): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode(27658): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(27658): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(27658): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(27658): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(27658): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(27658): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(27658): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(27658): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(27658): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(27658): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(27658): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(27658): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(27658): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(27658): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(27658): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(27658): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(27658): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(27658): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(27658): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(27658): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(27658): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(27658): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(27658): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 41 
+D/StrictMode(30277): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(30277): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(30277): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 42 
+D/StrictMode(  485): StrictMode policy violation; ~duration=42 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(  485): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(  485): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 48 
+D/StrictMode( 3477): StrictMode policy violation; ~duration=48 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 3477): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 3477): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 44 
+D/StrictMode( 5181): StrictMode policy violation; ~duration=44 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 5181): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 5181): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 41 
+D/StrictMode( 6566): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 6566): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 6566): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 42 
+D/StrictMode( 8288): StrictMode policy violation; ~duration=42 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 8288): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 8288): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 258 
+D/StrictMode( 8770): StrictMode policy violation; ~duration=258 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 8770): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 8770): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 8770): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode( 8770): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode( 8770): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode( 8770): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode( 8770): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode( 8770): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode( 8770): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode( 8770): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode( 8770): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode( 8770): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode( 8770): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode( 8770): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode( 8770): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode( 8770): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode( 8770): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode( 8770): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode( 8770): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode( 8770): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode( 8770): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 248 
+D/StrictMode( 8770): StrictMode policy violation; ~duration=248 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 8770): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 8770): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 8770): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode( 8770): 	at android.app.SharedPreferencesImpl.getString(SharedPreferencesImpl.java:223)
+D/StrictMode( 8770): 	at com.sogou.androidtool.util.PreferenceUtil.getString(SogouSource:129)
+D/StrictMode( 8770): 	at com.sogou.androidtool.serverconfig.ServerConfig.getTimerUpdateNotifyRange(SogouSource:336)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.getWakeUpTime(SogouSource:115)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.setUpFromAlarm(SogouSource:124)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:113)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode( 8770): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode( 8770): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode( 8770): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode( 8770): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode( 8770): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode( 8770): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode( 8770): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode( 8770): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode( 8770): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode( 8770): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode( 8770): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode( 8770): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode( 8770): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode( 8770): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode( 8770): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode( 8770): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode( 8770): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode( 8770): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 45 
+D/StrictMode(14988): StrictMode policy violation; ~duration=45 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(14988): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(14988): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 42 
+D/StrictMode(16645): StrictMode policy violation; ~duration=42 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(16645): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(16645): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 42 
+D/StrictMode(17244): StrictMode policy violation; ~duration=42 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(17244): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(17244): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 41 
+D/StrictMode(17739): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(17739): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(17739): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 41 
+D/StrictMode(18621): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(18621): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(18621): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 211 
+D/StrictMode(20761): StrictMode policy violation; ~duration=211 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(20761): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(20761): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(20761): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(20761): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode(20761): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode(20761): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode(20761): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(20761): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(20761): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(20761): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(20761): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(20761): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(20761): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(20761): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(20761): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(20761): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(20761): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(20761): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(20761): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(20761): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(20761): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(20761): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(20761): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(20761): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(20761): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(20761): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(20761): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(20761): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(20761): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 244 
+D/StrictMode(21859): StrictMode policy violation; ~duration=244 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(21859): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(21859): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(21859): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(21859): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(21859): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(21859): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(21859): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(21859): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(21859): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(21859): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(21859): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(21859): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(21859): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(21859): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(21859): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(21859): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(21859): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(21859): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(21859): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(21859): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(21859): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 231 
+D/StrictMode(21859): StrictMode policy violation; ~duration=231 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(21859): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(21859): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(21859): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(21859): 	at android.app.SharedPreferencesImpl.getString(SharedPreferencesImpl.java:223)
+D/StrictMode(21859): 	at com.sogou.androidtool.util.PreferenceUtil.getString(SogouSource:129)
+D/StrictMode(21859): 	at com.sogou.androidtool.serverconfig.ServerConfig.getTimerUpdateNotifyRange(SogouSource:336)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.getWakeUpTime(SogouSource:115)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.setUpFromAlarm(SogouSource:124)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:113)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(21859): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(21859): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(21859): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(21859): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(21859): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(21859): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(21859): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(21859): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(21859): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(21859): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(21859): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(21859): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(21859): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(21859): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(21859): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(21859): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(21859): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(21859): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 43 
+D/StrictMode(26932): StrictMode policy violation; ~duration=43 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(26932): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(26932): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 44 
+D/StrictMode(28031): StrictMode policy violation; ~duration=44 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(28031): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(28031): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 50 
+D/StrictMode(31331): StrictMode policy violation; ~duration=50 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(31331): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(31331): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 174 
+D/StrictMode(31909): StrictMode policy violation; ~duration=174 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(31909): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(31909): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(31909): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(31909): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(31909): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(31909): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(31909): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(31909): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(31909): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(31909): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(31909): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(31909): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(31909): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(31909): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(31909): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(31909): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(31909): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(31909): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(31909): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(31909): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(31909): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 160 
+D/StrictMode(31909): StrictMode policy violation; ~duration=160 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(31909): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(31909): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(31909): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(31909): 	at android.app.SharedPreferencesImpl.getString(SharedPreferencesImpl.java:223)
+D/StrictMode(31909): 	at com.sogou.androidtool.util.PreferenceUtil.getString(SogouSource:129)
+D/StrictMode(31909): 	at com.sogou.androidtool.serverconfig.ServerConfig.getTimerUpdateNotifyRange(SogouSource:336)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.getWakeUpTime(SogouSource:115)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.setUpFromAlarm(SogouSource:124)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:113)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(31909): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(31909): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(31909): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(31909): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(31909): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(31909): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(31909): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(31909): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(31909): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(31909): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(31909): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(31909): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(31909): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(31909): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(31909): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(31909): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(31909): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(31909): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 41 
+D/StrictMode(  781): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(  781): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(  781): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 54 
+D/StrictMode( 4840): StrictMode policy violation; ~duration=54 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 4840): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 4840): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 4840): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode( 4840): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode( 4840): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode( 4840): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode( 4840): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode( 4840): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode( 4840): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode( 4840): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode( 4840): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode( 4840): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode( 4840): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode( 4840): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode( 4840): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode( 4840): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode( 4840): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode( 4840): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode( 4840): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode( 4840): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode( 4840): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode( 4840): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode( 4840): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode( 4840): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode( 4840): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode( 4840): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode( 4840): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode( 4840): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode( 4840): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 43 
+D/StrictMode( 5361): StrictMode policy violation; ~duration=43 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 5361): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 5361): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 55 
+D/StrictMode( 5698): StrictMode policy violation; ~duration=55 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 5698): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 5698): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 5698): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode( 5698): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode( 5698): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode( 5698): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode( 5698): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode( 5698): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode( 5698): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode( 5698): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode( 5698): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode( 5698): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode( 5698): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode( 5698): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode( 5698): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode( 5698): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode( 5698): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode( 5698): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode( 5698): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode( 5698): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode( 5698): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode( 5698): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode( 5698): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode( 5698): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode( 5698): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode( 5698): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode( 5698): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode( 5698): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode( 5698): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 41 
+D/StrictMode( 5698): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 5698): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 5698): 	at com.sogou.androidtool.util.PreferenceUtil.getString(SogouSource:129)
+
+
+===================
+cost time : 49 
+D/StrictMode( 5902): StrictMode policy violation; ~duration=49 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 5902): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 5902): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 43 
+D/StrictMode( 6135): StrictMode policy violation; ~duration=43 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 6135): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 6135): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 42 
+D/StrictMode( 6359): StrictMode policy violation; ~duration=42 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 6359): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 6359): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 43 
+D/StrictMode( 6578): StrictMode policy violation; ~duration=43 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 6578): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 6578): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 42 
+D/StrictMode( 7367): StrictMode policy violation; ~duration=42 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 7367): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 7367): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 43 
+D/StrictMode( 7764): StrictMode policy violation; ~duration=43 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 7764): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 7764): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 45 
+D/StrictMode( 8886): StrictMode policy violation; ~duration=45 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode( 8886): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode( 8886): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 49 
+D/StrictMode(11186): StrictMode policy violation; ~duration=49 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(11186): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(11186): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 47 
+D/StrictMode(11700): StrictMode policy violation; ~duration=47 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(11700): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(11700): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 48 
+D/StrictMode(12467): StrictMode policy violation; ~duration=48 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(12467): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(12467): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 231 
+D/StrictMode(12928): StrictMode policy violation; ~duration=231 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(12928): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(12928): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(12928): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(12928): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(12928): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(12928): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(12928): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(12928): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(12928): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(12928): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(12928): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(12928): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(12928): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(12928): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(12928): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(12928): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(12928): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(12928): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(12928): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(12928): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(12928): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 220 
+D/StrictMode(12928): StrictMode policy violation; ~duration=220 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(12928): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(12928): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(12928): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(12928): 	at android.app.SharedPreferencesImpl.getString(SharedPreferencesImpl.java:223)
+D/StrictMode(12928): 	at com.sogou.androidtool.util.PreferenceUtil.getString(SogouSource:129)
+D/StrictMode(12928): 	at com.sogou.androidtool.serverconfig.ServerConfig.getTimerUpdateNotifyRange(SogouSource:336)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.getWakeUpTime(SogouSource:115)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.setUpFromAlarm(SogouSource:124)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:113)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(12928): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(12928): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(12928): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(12928): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(12928): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(12928): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(12928): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(12928): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(12928): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(12928): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(12928): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(12928): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(12928): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(12928): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(12928): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(12928): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(12928): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(12928): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 45 
+D/StrictMode(13405): StrictMode policy violation; ~duration=45 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(13405): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(13405): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 44 
+D/StrictMode(13706): StrictMode policy violation; ~duration=44 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(13706): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(13706): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 41 
+D/StrictMode(13747): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(13747): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(13747): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 46 
+D/StrictMode(13891): StrictMode policy violation; ~duration=46 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(13891): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(13891): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 43 
+D/StrictMode(14428): StrictMode policy violation; ~duration=43 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(14428): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(14428): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 47 
+D/StrictMode(15294): StrictMode policy violation; ~duration=47 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(15294): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(15294): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 46 
+D/StrictMode(15829): StrictMode policy violation; ~duration=46 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(15829): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(15829): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 91 
+D/StrictMode(16450): StrictMode policy violation; ~duration=91 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(16450): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(16450): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(16450): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(16450): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(16450): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(16450): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(16450): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(16450): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(16450): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(16450): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(16450): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(16450): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(16450): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(16450): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(16450): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(16450): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(16450): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(16450): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(16450): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(16450): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(16450): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 78 
+D/StrictMode(16450): StrictMode policy violation; ~duration=78 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(16450): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(16450): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(16450): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(16450): 	at android.app.SharedPreferencesImpl.getString(SharedPreferencesImpl.java:223)
+D/StrictMode(16450): 	at com.sogou.androidtool.util.PreferenceUtil.getString(SogouSource:129)
+D/StrictMode(16450): 	at com.sogou.androidtool.serverconfig.ServerConfig.getTimerUpdateNotifyRange(SogouSource:336)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.getWakeUpTime(SogouSource:115)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.setUpFromAlarm(SogouSource:124)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:113)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(16450): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(16450): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(16450): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(16450): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(16450): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(16450): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(16450): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(16450): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(16450): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(16450): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(16450): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(16450): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(16450): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(16450): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(16450): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(16450): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(16450): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(16450): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 41 
+D/StrictMode(16716): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(16716): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(16716): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+
+
+===================
+cost time : 56 
+D/StrictMode(19217): StrictMode policy violation; ~duration=56 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(19217): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(19217): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(19217): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(19217): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode(19217): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode(19217): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode(19217): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(19217): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(19217): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(19217): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(19217): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(19217): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(19217): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(19217): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(19217): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(19217): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(19217): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(19217): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(19217): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(19217): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(19217): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(19217): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(19217): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(19217): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(19217): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(19217): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(19217): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(19217): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(19217): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 45 
+D/StrictMode(19217): StrictMode policy violation; ~duration=45 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(19217): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(19217): 	at com.sogou.androidtool.util.PreferenceUtil.getString(SogouSource:129)
+
+
+===================
+cost time : 52 
+D/StrictMode(19465): StrictMode policy violation; ~duration=52 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(19465): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(19465): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(19465): 	at android.app.SharedPreferencesImpl.awaitLoadedLocked(SharedPreferencesImpl.java:203)
+D/StrictMode(19465): 	at android.app.SharedPreferencesImpl.getBoolean(SharedPreferencesImpl.java:260)
+D/StrictMode(19465): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
+D/StrictMode(19465): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.<init>(SogouSource:102)
+D/StrictMode(19465): 	at com.sogou.androidtool.sdk.notification.internal.UpdateNotifyCenter.getInstance(SogouSource:93)
+D/StrictMode(19465): 	at com.sogou.androidtool.sdk.notification.internal.NotificationCenter.getWorker(SogouSource:631)
+D/StrictMode(19465): 	at com.sogou.androidtool.receiver.NetChangeManager.load(SogouSource:51)
+D/StrictMode(19465): 	at com.sogou.androidtool.receiver.NetChangeManager.<init>(SogouSource:19)
+D/StrictMode(19465): 	at com.sogou.androidtool.receiver.NetChangeManager.getInstance(SogouSource:24)
+D/StrictMode(19465): 	at com.sogou.androidtool.sdk.MobileToolSDK.init(SogouSource:127)
+D/StrictMode(19465): 	at com.sogou.androidtool.sdk.MobileToolSDK.<init>(SogouSource:80)
+D/StrictMode(19465): 	at com.sogou.androidtool.sdk.MobileToolSDK.getInstance(SogouSource:51)
+D/StrictMode(19465): 	at com.sogou.androidtool.sdk.MobileToolSDK.setAppContext(SogouSource:89)
+D/StrictMode(19465): 	at com.sogou.androidtool.MobileTools.createInstance(SogouSource:74)
+D/StrictMode(19465): 	at com.sohu.inputmethod.sogou.SogouAppApplication.onCreate(SogouSource:46)
+D/StrictMode(19465): 	at android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1007)
+D/StrictMode(19465): 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:4417)
+D/StrictMode(19465): 	at android.app.ActivityThread.access$1500(ActivityThread.java:139)
+D/StrictMode(19465): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1260)
+D/StrictMode(19465): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+D/StrictMode(19465): 	at android.os.Looper.loop(Looper.java:136)
+D/StrictMode(19465): 	at android.app.ActivityThread.main(ActivityThread.java:5105)
+D/StrictMode(19465): 	at java.lang.reflect.Method.invokeNative(Native Method)
+D/StrictMode(19465): 	at java.lang.reflect.Method.invoke(Method.java:515)
+D/StrictMode(19465): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:792)
+D/StrictMode(19465): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:608)
+D/StrictMode(19465): 	at dalvik.system.NativeStart.main(Native Method)
+
+
+===================
+cost time : 41 
+D/StrictMode(19465): StrictMode policy violation; ~duration=41 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(19465): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(19465): 	at com.sogou.androidtool.util.PreferenceUtil.getString(SogouSource:129)
+
+
+===================
+cost time : 49 
+D/StrictMode(20225): StrictMode policy violation; ~duration=49 ms: android.os.StrictMode$StrictModeDiskReadViolation: policy=31 violation=2
+D/StrictMode(20225): 	at android.os.StrictMode$AndroidBlockGuardPolicy.onReadFromDisk(StrictMode.java:1138)
+D/StrictMode(20225): 	at com.sogou.androidtool.sdk.notification.internal.DefaultUpdateStrategy.<init>(SogouSource:86)
