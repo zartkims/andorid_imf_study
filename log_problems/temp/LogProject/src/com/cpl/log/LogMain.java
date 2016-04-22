@@ -9,14 +9,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class LogMain {
-	public static int sWhollyPrint = 50;//Èç¹û±ÈÕâ¸ö¶àÈ«¶¼´ò³öÀ´
+	public static int sWhollyPrint = 50;//å¦‚æœæ¯”è¿™ä¸ªå¤šå…¨éƒ½æ‰“å‡ºæ¥
+	public static int sBigThan = 0;
 	public static void main(String[] args) throws Exception {
 //		System.out.println(new File("log_01.log").exists());
 		try {
-			//´«µİµÄ²ÎÊıµÚÒ»¸öÊÇ¼ì²â´óÓÚ¶àÉÙÔòÊä³ö  µÚ¶ş¸ö²ÎÊıÔòÊÇ´óÓÚ¶àÉÙÔòÊä³öÈ«²¿logÄ¬ÈÏ50
-			int bigThan = 0;
+			//ä¼ é€’çš„å‚æ•°ç¬¬ä¸€ä¸ªæ˜¯æ£€æµ‹å¤§äºå¤šå°‘åˆ™è¾“å‡º  ç¬¬äºŒä¸ªå‚æ•°åˆ™æ˜¯å¤§äºå¤šå°‘åˆ™è¾“å‡ºå…¨éƒ¨logé»˜è®¤50
+			
 			if (null != args && args.length > 0) {
-				bigThan = getInt(args[0], 0);
+				sBigThan = getInt(args[0], 0);
 				if (args.length > 1) {
 					sWhollyPrint = getInt(args[1], 50);
 				}
@@ -24,20 +25,21 @@ public class LogMain {
 			
 			File file = new File("log_01.log");
 			File file2 = new File("log_02.log");
-			File outFile = new File("result1"+"_bigthan_"+bigThan);
-			File outFile2 = new File("result2"+"_bigthan_"+bigThan);
+			File outFile = new File("result1"+"_morethan_"+sBigThan);
+			File outFile2 = new File("result2"+"_morethan_"+sBigThan);
+			
 			
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			BufferedWriter writer = new BufferedWriter(new FileWriter(outFile));
 			
-			dealFile(reader, writer, bigThan);
+			dealFile(reader, writer);
 			
 			reader = new BufferedReader(new FileReader(file2));
 			writer = new BufferedWriter(new FileWriter(outFile2));
-			dealFile(reader, writer, bigThan);
+			dealFile(reader, writer);
 	        System.out.println("finish");
 		} catch (Exception e) {
-			System.err.print("ÇëÈ·±£jarºÍlogÎÄ¼şÔÚÍ¬Ò»Ä¿Â¼ÏÂ,²¢ÇÒµÚÒ»¸ölogÎÄ¼şÃüÃûÎªlog_01.log,µÚ¶ş¸öÃüÃûÎªlog_02.log");
+			System.err.print("è¯·ç¡®ä¿jarå’Œlogæ–‡ä»¶åœ¨åŒä¸€ç›®å½•ä¸‹,å¹¶ä¸”ç¬¬ä¸€ä¸ªlogæ–‡ä»¶å‘½åä¸ºlog_01.log,ç¬¬äºŒä¸ªå‘½åä¸ºlog_02.log");
 			System.out.println(e);
 		}
 		
@@ -52,10 +54,11 @@ public class LogMain {
 		}
 	}
 
-	public static void dealFile(BufferedReader reader, BufferedWriter writer, int big) throws Exception {
+	public static void dealFile(BufferedReader reader, BufferedWriter writer) throws Exception {
 		try {
 			String line;
-			boolean findFirstUs = false;//ÎÒÃÇµÄÕ»µÄµÚÒ»¸ölogÒ²¾ÍÊÇÖ±½Óµ÷ÓÃÄÇ¸ölog
+			int lineNum = 0;
+			boolean findFirstUs = false;//æˆ‘ä»¬çš„æ ˆçš„ç¬¬ä¸€ä¸ªlogä¹Ÿå°±æ˜¯ç›´æ¥è°ƒç”¨é‚£ä¸ªlog
 			boolean whollyPrint = false;
 			while ((line = reader.readLine()) != null) {
 				if (line.contains("StrictMode policy violation; ~duration=")) {
@@ -63,15 +66,16 @@ public class LogMain {
 					int numin = line.indexOf('=') + 1;
 					int afterP = line.indexOf("ms: android");
 					String time = line.substring(numin, afterP);
-					if (getInt(time, 0) > big) {
+					if (getInt(time, 0) > sBigThan) {
 						if(getInt(time, 0) > sWhollyPrint) {
 							whollyPrint = true; 
 						}
+						lineNum++;
 						writer.write("\r\n\r\n===================\r\n");
 						writer.write("cost time : " + time + "\r\n");
 						writer.write(line+ "\r\n");
 						line = reader.readLine();
-						writer.write(line+ "\r\n");//ÕâÒ»ĞĞÊÇÀàĞÍĞÅÏ¢
+						writer.write(line+ "\r\n");//è¿™ä¸€è¡Œæ˜¯ç±»å‹ä¿¡æ¯
 						findFirstUs = true;
 					}
 				}
@@ -85,6 +89,7 @@ public class LogMain {
 					}
 				}
 			}
+			writer.write("total : "+ lineNum + "\r\n");
 		} catch (Exception e) {
 			System.out.println(e);
 			throw e;

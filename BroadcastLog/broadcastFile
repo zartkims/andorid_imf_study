@@ -1,0 +1,1456 @@
+
+Wed Apr 20 21:38:48 GMT+08:00 2016********************
+com.sohu.inputmethod.sogou
+android.intent.action.INPUT_METHOD_CHANGED
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+95
+Wed Apr 20 20:22:00 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.send.hmt.contact.data
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+18
+Wed Apr 20 20:23:02 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.update.public.key
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+17
+Wed Apr 20 20:23:02 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+67
+Wed Apr 20 20:26:42 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Wed Apr 20 20:28:08 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+42
+Wed Apr 20 20:48:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+16
+Wed Apr 20 21:26:56 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.WIFI_STATE_CHANGED
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+26
+Wed Apr 20 21:28:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+28
+Wed Apr 20 21:29:02 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+19
+Wed Apr 20 21:29:02 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+29
+Wed Apr 20 21:29:07 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Wed Apr 20 21:29:55 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+21
+Wed Apr 20 21:30:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+32
+Wed Apr 20 21:30:21 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+25
+Wed Apr 20 21:30:37 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+17
+Wed Apr 20 21:30:53 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+21
+Wed Apr 20 21:30:53 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+14
+Wed Apr 20 21:31:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.STATE_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Wed Apr 20 21:31:07 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.update.netswitch
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+41
+Wed Apr 20 21:31:08 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.send.errorlog
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+17
+Wed Apr 20 21:31:08 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.update.public.key
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+22
+Wed Apr 20 21:31:08 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+12
+Wed Apr 20 21:31:11 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+15
+Wed Apr 20 21:31:11 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+23
+Wed Apr 20 21:31:23 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+13
+Wed Apr 20 21:31:26 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+18
+Wed Apr 20 21:32:06 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+23
+Wed Apr 20 21:38:23 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+18
+Wed Apr 20 21:38:26 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+12
+Wed Apr 20 21:38:48 GMT+08:00 2016
+=================
+
+Wed Apr 20 23:20:42 GMT+08:00 2016********************
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+21
+Wed Apr 20 21:39:09 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Wed Apr 20 21:39:09 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+37
+Wed Apr 20 21:39:31 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+29
+Wed Apr 20 21:39:52 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+44
+Wed Apr 20 21:40:14 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+17
+Wed Apr 20 21:42:18 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+23
+Wed Apr 20 21:49:49 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.active.sogou.hmt
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+22
+Wed Apr 20 21:50:46 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+16
+Wed Apr 20 22:50:39 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+23
+Wed Apr 20 23:13:29 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+48
+Wed Apr 20 23:13:31 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+28
+Wed Apr 20 23:13:53 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+23
+Wed Apr 20 23:14:15 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Wed Apr 20 23:14:36 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+22
+Wed Apr 20 23:14:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+18
+Wed Apr 20 23:15:19 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+23
+Wed Apr 20 23:15:41 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+21
+Wed Apr 20 23:16:02 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+20
+Wed Apr 20 23:16:24 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+14
+Wed Apr 20 23:16:45 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Wed Apr 20 23:17:07 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+21
+Wed Apr 20 23:17:29 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+17
+Wed Apr 20 23:17:50 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Wed Apr 20 23:18:11 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+18
+Wed Apr 20 23:18:33 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+12
+Wed Apr 20 23:19:16 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+31
+Wed Apr 20 23:19:37 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+25
+Wed Apr 20 23:19:59 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+19
+Wed Apr 20 23:20:20 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+15
+Wed Apr 20 23:20:42 GMT+08:00 2016
+=================
+
+Thu Apr 21 06:46:23 GMT+08:00 2016********************
+com.sohu.inputmethod.sogou
+android.intent.action.DOWNLOAD_WAKEUP.sogousdk
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+30
+Wed Apr 20 23:48:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.upload.cloudinput
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+30
+Wed Apr 20 23:49:27 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.update.public.key
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+16
+Wed Apr 20 23:49:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+11
+Wed Apr 20 23:53:11 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.statisticsdata.onedayup
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+56
+Thu Apr 21 00:00:01 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.active.sogou.hmt
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+40
+Thu Apr 21 00:48:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+101
+Thu Apr 21 00:50:04 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+68
+Thu Apr 21 00:50:04 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+80
+Thu Apr 21 00:50:10 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+22
+Thu Apr 21 00:50:10 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+32
+Thu Apr 21 00:50:54 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+91
+Thu Apr 21 00:52:11 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+16
+Thu Apr 21 00:52:11 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+25
+Thu Apr 21 01:53:35 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.UPDATE_NOTIFICATION
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+46
+Thu Apr 21 02:10:34 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.UPDATE_NOTIFICATION
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+14
+Thu Apr 21 02:34:17 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.UPDATE_NOTIFICATION
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+13
+Thu Apr 21 02:46:50 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.UPDATE_NOTIFICATION
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+27
+Thu Apr 21 02:46:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.UPDATE_NOTIFICATION
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+13
+Thu Apr 21 02:46:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.UPDATE_NOTIFICATION
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+11
+Thu Apr 21 02:46:59 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.upgrade.netnotify
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+21
+Thu Apr 21 02:50:39 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+41
+Thu Apr 21 02:50:39 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+19
+Thu Apr 21 03:55:34 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+18
+Thu Apr 21 04:55:35 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+21
+Thu Apr 21 05:52:57 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.CLOSE_SYSTEM_DIALOGS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+14
+Thu Apr 21 06:44:27 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+79
+Thu Apr 21 06:44:31 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.UPDATE_NOTIFICATION_SCREENON
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+75
+Thu Apr 21 06:44:55 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+69
+Thu Apr 21 06:45:53 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.UPDATE_NOTIFICATION_SCREENON
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+39
+Thu Apr 21 06:46:23 GMT+08:00 2016
+=================
+
+Thu Apr 21 08:50:28 GMT+08:00 2016********************
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+18
+Thu Apr 21 07:02:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+19
+Thu Apr 21 07:52:16 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+21
+Thu Apr 21 08:15:56 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+14
+Thu Apr 21 08:15:56 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.STATE_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+127
+Thu Apr 21 08:15:57 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.autoupgrade.sharedobject
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+31
+Thu Apr 21 08:15:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.update.public.key
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+17
+Thu Apr 21 08:15:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+219
+Thu Apr 21 08:16:01 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.upgrade.alive
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+51
+Thu Apr 21 08:16:03 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+17
+Thu Apr 21 08:16:04 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.upgrade.alive.input
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+26
+Thu Apr 21 08:17:21 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+15
+Thu Apr 21 08:44:47 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+22
+Thu Apr 21 08:44:47 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+18
+Thu Apr 21 08:45:08 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Thu Apr 21 08:45:30 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+12
+Thu Apr 21 08:45:51 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+36
+Thu Apr 21 08:46:12 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+70
+Thu Apr 21 08:46:34 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+23
+Thu Apr 21 08:46:55 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+22
+Thu Apr 21 08:47:16 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+21
+Thu Apr 21 08:47:37 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+30
+Thu Apr 21 08:47:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+32
+Thu Apr 21 08:48:20 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Thu Apr 21 08:48:41 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+14
+Thu Apr 21 08:49:02 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+31
+Thu Apr 21 08:49:24 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+88
+Thu Apr 21 08:49:45 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+48
+Thu Apr 21 08:50:06 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+22
+Thu Apr 21 08:50:27 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Thu Apr 21 08:50:28 GMT+08:00 2016
+=================
+
+Thu Apr 21 09:23:15 GMT+08:00 2016********************
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+25
+Thu Apr 21 08:50:41 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Thu Apr 21 08:50:49 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+23
+Thu Apr 21 08:50:49 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+62
+Thu Apr 21 08:51:10 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+30
+Thu Apr 21 08:51:32 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+40
+Thu Apr 21 08:51:53 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+35
+Thu Apr 21 08:52:14 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+40
+Thu Apr 21 08:52:35 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+33
+Thu Apr 21 08:54:02 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+71
+Thu Apr 21 08:55:28 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+56
+Thu Apr 21 08:55:50 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+47
+Thu Apr 21 09:01:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+64
+Thu Apr 21 09:05:07 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+48
+Thu Apr 21 09:12:01 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+62
+Thu Apr 21 09:13:43 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Thu Apr 21 09:14:30 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+33
+Thu Apr 21 09:16:44 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+23
+Thu Apr 21 09:17:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+43
+Thu Apr 21 09:17:27 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+46
+Thu Apr 21 09:17:48 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+19
+Thu Apr 21 09:18:09 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+19
+Thu Apr 21 09:19:36 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+30
+Thu Apr 21 09:19:57 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+16
+Thu Apr 21 09:20:18 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+37
+Thu Apr 21 09:21:01 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+32
+Thu Apr 21 09:21:22 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+29
+Thu Apr 21 09:21:44 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+38
+Thu Apr 21 09:22:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+34
+Thu Apr 21 09:22:26 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+37
+Thu Apr 21 09:23:15 GMT+08:00 2016
+=================
+
+Thu Apr 21 09:38:13 GMT+08:00 2016********************
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+92
+Thu Apr 21 09:24:24 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+131
+Thu Apr 21 09:24:57 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+112
+Thu Apr 21 09:24:59 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+78
+Thu Apr 21 09:25:00 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+14
+Thu Apr 21 09:25:04 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+129
+Thu Apr 21 09:25:15 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+75
+Thu Apr 21 09:25:41 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+64
+Thu Apr 21 09:26:21 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.STATE_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Thu Apr 21 09:26:22 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.send.hmt.contact.data
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+14
+Thu Apr 21 09:26:22 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.update.public.key
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+17
+Thu Apr 21 09:26:22 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+22
+Thu Apr 21 09:26:25 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+39
+Thu Apr 21 09:26:25 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+18
+Thu Apr 21 09:26:28 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+150
+Thu Apr 21 09:26:43 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+112
+Thu Apr 21 09:27:19 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+70
+Thu Apr 21 09:27:44 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+145
+Thu Apr 21 09:28:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+274
+Thu Apr 21 09:28:12 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+345
+Thu Apr 21 09:29:31 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+133
+Thu Apr 21 09:31:13 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+120
+Thu Apr 21 09:31:34 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Thu Apr 21 09:32:42 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+21
+Thu Apr 21 09:32:43 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+122
+Thu Apr 21 09:33:12 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+49
+Thu Apr 21 09:36:20 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+98
+Thu Apr 21 09:36:32 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+137
+Thu Apr 21 09:37:10 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+18
+Thu Apr 21 09:37:32 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+51
+Thu Apr 21 09:38:13 GMT+08:00 2016
+=================
+
+Thu Apr 21 11:00:27 GMT+08:00 2016********************
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+68
+Thu Apr 21 09:40:32 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+32
+Thu Apr 21 09:40:33 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Thu Apr 21 09:40:35 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Thu Apr 21 09:42:00 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+36
+Thu Apr 21 09:42:01 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+78
+Thu Apr 21 09:42:50 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+44
+Thu Apr 21 09:43:14 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+12
+Thu Apr 21 09:43:15 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+12
+Thu Apr 21 09:43:54 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+31
+Thu Apr 21 09:43:55 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+28
+Thu Apr 21 09:44:11 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+28
+Thu Apr 21 09:44:27 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+69
+Thu Apr 21 09:44:44 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_OFF
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+43
+Thu Apr 21 09:45:14 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Thu Apr 21 09:45:16 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+32
+Thu Apr 21 09:47:12 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+20
+Thu Apr 21 09:48:37 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+13
+Thu Apr 21 09:48:54 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+11
+Thu Apr 21 09:49:07 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+38
+Thu Apr 21 09:51:08 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+20
+Thu Apr 21 10:07:14 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+14
+Thu Apr 21 10:07:25 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+14
+Thu Apr 21 10:17:15 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+20
+Thu Apr 21 10:22:09 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+36
+Thu Apr 21 10:24:07 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+45
+Thu Apr 21 10:25:14 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.intent.action.SCREEN_ON
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+12
+Thu Apr 21 10:25:16 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.active.sogou.chat
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+11
+Thu Apr 21 10:29:39 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.auto.excute.for.one.hour
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+14
+Thu Apr 21 10:51:32 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+22
+Thu Apr 21 11:00:27 GMT+08:00 2016
+=================
+
+Thu Apr 21 11:24:54 GMT+08:00 2016********************
+com.sohu.inputmethod.sogou
+android.intent.action.PUSH_NOTIFY_ALARM
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+79
+Thu Apr 21 11:04:56 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+163
+Thu Apr 21 11:15:55 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.conn.CONNECTIVITY_CHANGE
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+17
+Thu Apr 21 11:15:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+187
+Thu Apr 21 11:15:59 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+sogou.action.update.public.key
+android.app.ActivityThread.handleReceiver(ActivityThread.java:2606)
+20
+Thu Apr 21 11:16:10 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+121
+Thu Apr 21 11:16:21 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+121
+Thu Apr 21 11:16:43 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+117
+Thu Apr 21 11:17:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+173
+Thu Apr 21 11:17:27 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+178
+Thu Apr 21 11:17:50 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+140
+Thu Apr 21 11:17:52 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+134
+Thu Apr 21 11:18:14 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+156
+Thu Apr 21 11:18:36 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+170
+Thu Apr 21 11:18:58 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+244
+Thu Apr 21 11:19:21 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+134
+Thu Apr 21 11:19:43 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+101
+Thu Apr 21 11:20:05 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+139
+Thu Apr 21 11:20:27 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+191
+Thu Apr 21 11:20:50 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+109
+Thu Apr 21 11:21:12 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+139
+Thu Apr 21 11:21:34 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+146
+Thu Apr 21 11:21:56 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+154
+Thu Apr 21 11:22:18 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+108
+Thu Apr 21 11:22:40 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+141
+Thu Apr 21 11:23:03 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+99
+Thu Apr 21 11:23:25 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+150
+Thu Apr 21 11:23:47 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+117
+Thu Apr 21 11:24:09 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+92
+Thu Apr 21 11:24:32 GMT+08:00 2016
+=================
+com.sohu.inputmethod.sogou
+android.net.wifi.SCAN_RESULTS
+android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:798)
+163
+Thu Apr 21 11:24:54 GMT+08:00 2016
+=================
