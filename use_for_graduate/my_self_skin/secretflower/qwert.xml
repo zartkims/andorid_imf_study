@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keyboard
+    keybroadid="1"
+    key_type="7"
+    skb_bg="ic_background.png"
+    width="10%p">
+
+    <key_type
+        id="7"
+        bg="ic_normal_key.png"
+        hlbg="ic_normal_key_press.png"/>
+
+
+    <key
+        skinid="KEY_COMMA_QWERT"
+        bg="ic_normal_function_key.png"
+        hlbg="ic_normal_function_key_press.png"
+        >
+        <!--<toggle_state-->
+            <!--bg="ic_normal_function_key.png"-->
+            <!--hlbg="ic_normal_function_key_press.png"-->
+            <!--state_id="@string/toggle_smiley" />-->
+        <!--<toggle_state-->
+            <!--bg="ic_normal_function_key.png"-->
+            <!--hlbg="ic_normal_function_key_press.png"-->
+            <!--state_id="@string/toggle_en_lower" />-->
+        <!--<toggle_state-->
+            <!--bg="ic_normal_function_key.png"-->
+            <!--hlbg="ic_normal_function_key_press.png"-->
+            <!--state_id="@string/toggle_en_upper" />-->
+        <!--<toggle_state-->
+            <!--bg="ic_normal_function_key.png"-->
+            <!--hlbg="ic_normal_function_key_press.png"-->
+            <!--state_id="@string/toggle_cn_cand" />-->
+    </key>
+
+    <key
+        skinid="KEY_DELETE_QWERT"
+        bg="ic_normal_function_key.png"
+        hlbg="ic_normal_function_key_press.png"
+        />
+
+    <key
+        skinid="KEY_SYMBOL_QWERT"
+        bg="ic_mid_function_key.png"
+        hlbg="ic_mid_function_key_press.png"
+        />
+    <key
+        skinid="KEY_LANGUAGE_QWERT"
+        bg="ic_big_function_key.png"
+        hlbg="ic_big_function_key_press.png"
+        />
+    <key
+        skinid="KEY_SPACE_QWERT"
+        bg="ic_space_normal.png"
+        hlbg="ic_space_press.png"
+        />
+    <key
+        bg="ic_normal_function_key.png"
+        hlbg="ic_normal_function_key_press.png"
+        skinid="KEY_PERIOD_QWERT"
+        />
+
+    <key
+        skinid="KEY_ENTER_QWERT"
+        bg="ic_big_function_key.png"
+        hlbg="ic_big_function_key_press.png"/>
+
+    <!-- 此时是uri-->
+    <key
+        label="/"
+        skinid="KEY_SEPARATE_URI"
+        bg="ic_big_function_key.png"
+        hlbg="ic_big_function_key_press.png"
+        width="15.304%p" />
+
+    <!-- 此时email键盘-->
+        <key
+            skinid="KEY_EMAIL_QWERT"
+            bg="ic_mid_function_key.png"
+            hlbg="ic_mid_function_key_press.png"/>
+        <key
+            skinid="KEY_SPACE_EMAIL_QWERT"
+            bg="ic_mid_function_key.png"
+            hlbg="ic_mid_function_key_press.png" />
+</keyboard>
+
