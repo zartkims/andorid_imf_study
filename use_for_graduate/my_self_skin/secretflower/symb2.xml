@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <keyboard
     keybroadid="3"
-    bkey_type="7"
+    key_type="7"
     skb_bg="ic_background.png">
     <key_type
         id="7"

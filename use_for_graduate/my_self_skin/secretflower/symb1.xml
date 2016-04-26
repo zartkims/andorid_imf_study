@@ -8,12 +8,11 @@
         bg="ic_normal_key.png"
         hlbg="ic_normal_key_press.png"/>
     <key
-        key_type="2"
         skinid="KEY_SHIFT_SYM"
         bg="ic_normal_function_key.png"
         hlbg="ic_normal_function_key_press.png"/>
 
-    <key id="3"
+    <key
         skinid="KEY_DELETE_SYM"
         bg="ic_normal_function_key.png"
         hlbg="ic_normal_function_key_press.png"/>

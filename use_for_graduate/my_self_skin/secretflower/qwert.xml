@@ -16,22 +16,6 @@
         bg="ic_normal_function_key.png"
         hlbg="ic_normal_function_key_press.png"
         >
-        <!--<toggle_state-->
-            <!--bg="ic_normal_function_key.png"-->
-            <!--hlbg="ic_normal_function_key_press.png"-->
-            <!--state_id="@string/toggle_smiley" />-->
-        <!--<toggle_state-->
-            <!--bg="ic_normal_function_key.png"-->
-            <!--hlbg="ic_normal_function_key_press.png"-->
-            <!--state_id="@string/toggle_en_lower" />-->
-        <!--<toggle_state-->
-            <!--bg="ic_normal_function_key.png"-->
-            <!--hlbg="ic_normal_function_key_press.png"-->
-            <!--state_id="@string/toggle_en_upper" />-->
-        <!--<toggle_state-->
-            <!--bg="ic_normal_function_key.png"-->
-            <!--hlbg="ic_normal_function_key_press.png"-->
-            <!--state_id="@string/toggle_cn_cand" />-->
     </key>
 
     <key
