@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <keyboard
     keybroadid="5"
-    bkey_type="8"
+    key_type="8"
+    balloon_bg="ic_pop_normal.png"
     skb_bg="ic_background.png">
     <key_type
         id="8"
@@ -11,7 +12,9 @@
         <key
             skinid="DELETE_PHONE"
             bg="ic_big_function_key.png"
-            hlbg="ic_big_function_key_press.png"/>
+            hlbg="ic_big_function_key_press.png"
+            icon="ic_delete_fg.png"
+            icon_popup="ic_delete_fg.png"/>
 
         <key
             id="2"

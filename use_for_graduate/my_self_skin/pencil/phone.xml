@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keyboard
+    keybroadid="5"
+    key_type="9"
+    balloon_bg="ic_pop_normal.png"
+    skb_bg="ic_background.png">
+    <key_type
+        id="9"
+        bg="ic_key_purple_land.png"
+        hlbg="ic_key_purple_land_press.png"/>
+    <!-- 红色阵营-->
+    <key
+        skinid="TWO_PHONE"
+        bg="ic_key_red_land.png"
+        hlbg="ic_key_red_land_press.png"
+        />
+    <key
+        skinid="FIVE_PHONE"
+        bg="ic_key_red_land.png"
+        hlbg="ic_key_red_land_press.png"
+        />
+    <key
+        skinid="EIGHT_PHONE"
+        bg="ic_key_red_land.png"
+        hlbg="ic_key_red_land_press.png"
+        />
+    <key
+        skinid="ZERO_PHONE"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png"
+        />
+    <!-- 橙色阵营-->
+    <key
+        skinid="THREE_PHONE"
+        bg="ic_key_orange_land.png"
+        hlbg="ic_key_orange_land_press.png"
+        />
+    <key
+        skinid="SIX_PHONE"
+        bg="ic_key_orange_land.png"
+        hlbg="ic_key_orange_land_press.png"
+        />
+    <key
+        skinid="NINE_PHONE"
+        bg="ic_key_orange_land.png"
+        hlbg="ic_key_orange_land_press.png"
+        />
+    <key
+        skinid="SPACE_PHONE"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png"
+        />
+    <!-- 蓝色阵营-->
+    <key
+        skinid="AND_PHONE"
+        bg="ic_symb_phone.png"
+        hlbg="ic_symb_phone_press.png"
+        />
+    <key
+        skinid="DOT_PHONE"
+        bg="ic_symb_phone.png"
+        hlbg="ic_symb_phone_press.png"
+        />
+    <!--粉红色阵营-->
+    <!-- ===下面是功能键=== -->
+
+
+    <key
+        skinid="DELETE_PHONE"
+        bg="ic_key_delete_bg.png"
+        hlbg="ic_key_delete_bg.png"
+        icon="ic_key_delete_fb.png"
+        icon_popup="ic_key_delete_fb.png"/>
+
+    <key
+        skinid="NUM_PHONE"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png"/>
+
+    <key
+        id="2"
+        skinid="NEXT_PHONE"
+        bbg="ic_transparent.png"
+        hlbg="ic_transparent.png"/>
+</keyboard>

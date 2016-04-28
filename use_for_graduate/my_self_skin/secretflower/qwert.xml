@@ -3,6 +3,7 @@
     keybroadid="1"
     key_type="7"
     skb_bg="ic_background.png"
+    balloon_bg="ic_pop_normal.png"
     width="10%p">
 
     <key_type
@@ -22,6 +23,8 @@
         skinid="KEY_DELETE_QWERT"
         bg="ic_normal_function_key.png"
         hlbg="ic_normal_function_key_press.png"
+        icon="ic_delete_fg.png"
+        icon_popup="ic_delete_fg.png"
         />
 
     <key

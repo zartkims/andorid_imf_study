@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keyboard
+    keybroadid="1"
+    key_type="8"
+    skb_bg="ic_background.png"
+    balloon_bg="ic_pop_normal.png"
+    width="10%p">
+   <!--本来这个type是没卵用的只是加了之后能省一点点点点力-->
+    <key_type
+        id="8"
+        bg="ic_key_purple.png"
+        hlbg="ic_key_purple_press.png"/>
+
+    <!-- 红色阵营-->
+    <key
+        skinid="KEY_W"
+        bg="ic_key_red.png"
+        hlbg="ic_key_red_press.png"
+        />
+    <key
+        skinid="KEY_S"
+        bg="ic_key_red.png"
+        hlbg="ic_key_red_press.png"
+        />
+    <key
+        skinid="KEY_X"
+        bg="ic_key_red.png"
+        hlbg="ic_key_red_press.png"
+        />
+    <key
+        skinid="KEY_U"
+        bg="ic_key_red.png"
+        hlbg="ic_key_red_press.png"
+        />
+    <key
+        skinid="KEY_J"
+        bg="ic_key_red.png"
+        hlbg="ic_key_red_press.png"
+        />
+    <key
+        skinid="KEY_M"
+        bg="ic_key_red.png"
+        hlbg="ic_key_red_press.png"
+        />
+    <!-- 橙色阵营-->
+    <key
+        skinid="KEY_E"
+        bg="ic_key_orange.png"
+        hlbg="ic_key_orange_press.png"
+        />
+    <key
+        skinid="KEY_D"
+        bg="ic_key_orange.png"
+        hlbg="ic_key_orange_press.png"
+        />
+    <key
+        skinid="KEY_C"
+        bg="ic_key_orange.png"
+        hlbg="ic_key_orange_press.png"
+        />
+    <key
+        skinid="KEY_I"
+        bg="ic_key_orange.png"
+        hlbg="ic_key_orange_press.png"
+        />
+    <key
+        skinid="KEY_K"
+        bg="ic_key_orange.png"
+        hlbg="ic_key_orange_press.png"
+        />
+    <!-- 蓝色阵营-->
+    <key
+        skinid="KEY_R"
+        bg="ic_key_blue.png"
+        hlbg="ic_key_blue_press.png"
+        />
+    <key
+        skinid="KEY_F"
+        bg="ic_key_blue.png"
+        hlbg="ic_key_blue_press.png"
+        />
+    <key
+        skinid="KEY_V"
+        bg="ic_key_blue.png"
+        hlbg="ic_key_blue_press.png"
+        />
+    <key
+        skinid="KEY_O"
+        bg="ic_key_blue.png"
+        hlbg="ic_key_blue_press.png"
+        />
+    <key
+        skinid="KEY_L"
+        bg="ic_key_blue.png"
+        hlbg="ic_key_blue_press.png"
+        />
+    <!--粉红色阵营-->
+    <key
+        skinid="KEY_T"
+        bg="ic_key_pink.png"
+        hlbg="ic_key_pink_press.png"
+        />
+    <key
+        skinid="KEY_G"
+        bg="ic_key_pink.png"
+        hlbg="ic_key_pink_press.png"
+        />
+    <key
+        skinid="KEY_B"
+        bg="ic_key_pink.png"
+        hlbg="ic_key_pink_press.png"
+        />
+    <key
+        skinid="KEY_P"
+        bg="ic_key_pink.png"
+        hlbg="ic_key_pink_press.png"
+        />
+    <!-- ===下面是功能键=== -->
+
+    <key
+        skinid="KEY_COMMA_QWERT"
+        bg="ic_key_sep.png"
+        hlbg="ic_key_sep_press.png"
+        />
+
+    <key
+        skinid="KEY_DELETE_QWERT"
+        bg="ic_key_delete_bg.png"
+        hlbg="ic_key_delete_bg.png"
+        icon="ic_key_delete_fb.png"
+        icon_popup="ic_key_delete_fb.png"
+        />
+
+    <key
+        skinid="KEY_SYMBOL_QWERT"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png"
+        />
+    <key
+        skinid="KEY_LANGUAGE_QWERT"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png"
+        />
+    <key
+        skinid="KEY_SPACE_QWERT"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png"
+        />
+    <key
+        skinid="KEY_PERIOD_QWERT"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png"
+        />
+
+    <key
+        skinid="KEY_ENTER_QWERT"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png"/>
+
+    <!-- 此时是uri-->
+    <key
+        skinid="KEY_SEPARATE_URI"
+        bg="ic_transparent.png"
+        hlbg="ic_transparent.png" />
+
+    <!-- 此时email键盘-->
+        <key
+            skinid="KEY_EMAIL_QWERT"
+            bg="ic_transparent.png"
+            hlbg="ic_transparent.png"/>
+        <key
+            skinid="KEY_SPACE_EMAIL_QWERT"
+            bg="ic_transparent.png"
+            hlbg="ic_transparent.png" />
+</keyboard>
+
